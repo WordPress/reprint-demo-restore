@@ -1,0 +1,918 @@
+{
+  "terms": [
+    {
+      "term_id": 1,
+      "name": "Uncategorized",
+      "slug": "uncategorized",
+      "term_group": 0
+    },
+    {
+      "term_id": 2,
+      "name": "On foot",
+      "slug": "on-foot",
+      "term_group": 0
+    },
+    {
+      "term_id": 3,
+      "name": "Small wonders",
+      "slug": "small-wonders",
+      "term_group": 0
+    },
+    {
+      "term_id": 4,
+      "name": "twentytwentyfive",
+      "slug": "twentytwentyfive",
+      "term_group": 0
+    },
+    {
+      "term_id": 5,
+      "name": "header",
+      "slug": "header",
+      "term_group": 0
+    },
+    {
+      "term_id": 6,
+      "name": "footer",
+      "slug": "footer",
+      "term_group": 0
+    }
+  ],
+  "term_taxonomy": [
+    {
+      "term_taxonomy_id": 1,
+      "term_id": 1,
+      "taxonomy": "category",
+      "description": "",
+      "parent": 0,
+      "count": 0
+    },
+    {
+      "term_taxonomy_id": 2,
+      "term_id": 2,
+      "taxonomy": "category",
+      "description": "",
+      "parent": 0,
+      "count": 3
+    },
+    {
+      "term_taxonomy_id": 3,
+      "term_id": 3,
+      "taxonomy": "category",
+      "description": "",
+      "parent": 0,
+      "count": 3
+    },
+    {
+      "term_taxonomy_id": 4,
+      "term_id": 4,
+      "taxonomy": "wp_theme",
+      "description": "",
+      "parent": 0,
+      "count": 10
+    },
+    {
+      "term_taxonomy_id": 5,
+      "term_id": 5,
+      "taxonomy": "wp_template_part_area",
+      "description": "",
+      "parent": 0,
+      "count": 1
+    },
+    {
+      "term_taxonomy_id": 6,
+      "term_id": 6,
+      "taxonomy": "wp_template_part_area",
+      "description": "",
+      "parent": 0,
+      "count": 1
+    }
+  ],
+  "posts": [
+    {
+      "ID": 4,
+      "post_date": "2026-10-30 13:19:00",
+      "post_date_gmt": "2026-10-30 13:19:00",
+      "post_content": "",
+      "post_title": "Clouds reflected in a still lake beneath wooded hills.",
+      "post_excerpt": "Photo by Laxman Bhattarai · CC0 · https://wordpress.org/photos/photo/9436a22d4f/",
+      "post_status": "inherit",
+      "comment_status": "open",
+      "ping_status": "closed",
+      "post_name": "field-notes-lake",
+      "post_modified": "2026-10-30 13:19:01",
+      "post_modified_gmt": "2026-10-30 13:19:01",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/wp-content/uploads/2026/10/field-notes-lake.webp",
+      "menu_order": 0,
+      "post_type": "attachment",
+      "post_mime_type": "image/webp",
+      "comment_count": 0
+    },
+    {
+      "ID": 5,
+      "post_date": "2026-10-30 13:19:01",
+      "post_date_gmt": "2026-10-30 13:19:01",
+      "post_content": "",
+      "post_title": "A woodland path lit by the evening sun.",
+      "post_excerpt": "Photo by Roy Tanck · CC0 · https://wordpress.org/photos/photo/79635261b4/",
+      "post_status": "inherit",
+      "comment_status": "open",
+      "ping_status": "closed",
+      "post_name": "field-notes-forest",
+      "post_modified": "2026-10-30 13:19:02",
+      "post_modified_gmt": "2026-10-30 13:19:02",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/wp-content/uploads/2026/10/field-notes-forest.webp",
+      "menu_order": 0,
+      "post_type": "attachment",
+      "post_mime_type": "image/webp",
+      "comment_count": 0
+    },
+    {
+      "ID": 6,
+      "post_date": "2026-10-30 13:19:02",
+      "post_date_gmt": "2026-10-30 13:19:02",
+      "post_content": "",
+      "post_title": "Waves rolling onto the rocky coast of Koh Samet Island.",
+      "post_excerpt": "Photo by Roy Tanck · CC0 · https://wordpress.org/photos/photo/60162fd3c9/",
+      "post_status": "inherit",
+      "comment_status": "open",
+      "ping_status": "closed",
+      "post_name": "field-notes-coast",
+      "post_modified": "2026-10-30 13:19:03",
+      "post_modified_gmt": "2026-10-30 13:19:03",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/wp-content/uploads/2026/10/field-notes-coast.webp",
+      "menu_order": 0,
+      "post_type": "attachment",
+      "post_mime_type": "image/webp",
+      "comment_count": 0
+    },
+    {
+      "ID": 7,
+      "post_date": "2026-10-30 13:19:03",
+      "post_date_gmt": "2026-10-30 13:19:03",
+      "post_content": "",
+      "post_title": "Wildflowers in a meadow beneath a warm evening sky.",
+      "post_excerpt": "Photo by Nilo Velez · CC0 · https://wordpress.org/photos/photo/726632647a/",
+      "post_status": "inherit",
+      "comment_status": "open",
+      "ping_status": "closed",
+      "post_name": "field-notes-meadow",
+      "post_modified": "2026-10-30 13:19:04",
+      "post_modified_gmt": "2026-10-30 13:19:04",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/wp-content/uploads/2026/10/field-notes-meadow.webp",
+      "menu_order": 0,
+      "post_type": "attachment",
+      "post_mime_type": "image/webp",
+      "comment_count": 0
+    },
+    {
+      "ID": 8,
+      "post_date": "2026-10-30 13:19:04",
+      "post_date_gmt": "2026-10-30 13:19:04",
+      "post_content": "",
+      "post_title": "A walker looking along a foggy forest trail.",
+      "post_excerpt": "Photo by annezazu · CC0 · https://wordpress.org/photos/photo/8416a9f5b3/",
+      "post_status": "inherit",
+      "comment_status": "open",
+      "ping_status": "closed",
+      "post_name": "field-notes-mist",
+      "post_modified": "2026-10-30 13:19:05",
+      "post_modified_gmt": "2026-10-30 13:19:05",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/wp-content/uploads/2026/10/field-notes-mist.webp",
+      "menu_order": 0,
+      "post_type": "attachment",
+      "post_mime_type": "image/webp",
+      "comment_count": 0
+    },
+    {
+      "ID": 9,
+      "post_date": "2026-10-30 13:19:05",
+      "post_date_gmt": "2026-10-30 13:19:05",
+      "post_content": "",
+      "post_title": "A mountain landscape reflected in a quiet lake.",
+      "post_excerpt": "Photo by Niels Oneglio · CC0 · https://wordpress.org/photos/photo/68464393ec/",
+      "post_status": "inherit",
+      "comment_status": "open",
+      "ping_status": "closed",
+      "post_name": "field-notes-mountain",
+      "post_modified": "2026-10-30 13:19:05",
+      "post_modified_gmt": "2026-10-30 13:19:05",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/wp-content/uploads/2026/10/field-notes-mountain.webp",
+      "menu_order": 0,
+      "post_type": "attachment",
+      "post_mime_type": "image/webp",
+      "comment_count": 0
+    },
+    {
+      "ID": 10,
+      "post_date": "2026-10-23 09:00:00",
+      "post_date_gmt": "2026-10-23 09:00:00",
+      "post_content": "<!-- wp:paragraph {\"dropCap\":true,\"className\":\"fn-lede\"} -->\n<p class=\"has-drop-cap fn-lede\">There is a particular kind of morning that makes a map feel unnecessary. The air is still, the path is clear, and somewhere beyond the trees there is water. That is enough of a plan.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading {\"level\":2,\"className\":\"\"} -->\n<h2 class=\"wp-block-heading\">Leave a little room</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>The shortest route would have been perfectly fine. A turn beside the gate, a stretch of road, and a straight line to the shore. But the smaller path looked inviting, so we followed it instead. It curved around the trees, briefly lost sight of the lake, and returned us to it from a different angle.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>Nothing remarkable happened along the way. A bird moved through the branches. Someone had balanced a small stone on a fence post. A patch of sunlight warmed the back of a bench. The morning was full of things that would have disappeared at a quicker pace.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading {\"level\":2,\"className\":\"\"} -->\n<h2 class=\"wp-block-heading\">At the edge of the day</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>By the time we reached the water, the clouds had started arranging themselves into another landscape. There were hills above the shoreline and hills beneath it. Every small ripple changed the picture.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>We found a place to sit. There was no photograph that needed taking and no next stop to reach. For a little while, arriving was the whole activity. The way home could wait.</p>\n<!-- /wp:paragraph -->\n<!-- wp:quote {\"className\":\"fn-quote\"} -->\n<blockquote class=\"wp-block-quote fn-quote\"><!-- wp:paragraph -->\n<p>Some days, getting there slowly is the best part of being there.</p>\n<!-- /wp:paragraph -->\n</blockquote>\n<!-- /wp:quote -->\n<!-- wp:group {\"className\":\"fn-try-note\"} -->\n<div class=\"wp-block-group fn-try-note\"><!-- wp:heading {\"level\":2,\"className\":\"\"} -->\n<h2 class=\"wp-block-heading\">A small thing to try</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>On your next familiar walk, take one different turning. Give yourself ten extra minutes and see what the longer route has been keeping to itself.</p>\n<!-- /wp:paragraph -->\n</div>\n<!-- /wp:group -->\n<!-- wp:paragraph {\"className\":\"fn-photo-credit\"} -->\n<p class=\"fn-photo-credit\">Photo by <a rel=\"noopener\" target=\"_blank\" href=\"https://wordpress.org/photos/photo/9436a22d4f/\">Laxman Bhattarai</a> · WordPress Photo Directory · CC0.</p>\n<!-- /wp:paragraph -->\n",
+      "post_title": "The long way to the water",
+      "post_excerpt": "An unhurried walk, a quiet shoreline, and the gentle pleasure of arriving with nothing left to do.",
+      "post_status": "publish",
+      "comment_status": "closed",
+      "ping_status": "closed",
+      "post_name": "the-long-way-to-the-water",
+      "post_modified": "2026-11-04 00:41:47",
+      "post_modified_gmt": "2026-11-04 00:41:47",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/the-long-way-to-the-water/",
+      "menu_order": 0,
+      "post_type": "post",
+      "post_mime_type": "",
+      "comment_count": 0
+    },
+    {
+      "ID": 11,
+      "post_date": "2026-10-20 09:00:00",
+      "post_date_gmt": "2026-10-20 09:00:00",
+      "post_content": "<!-- wp:paragraph {\"dropCap\":true,\"className\":\"fn-lede\"} -->\n<p class=\"has-drop-cap fn-lede\">Late light changes a familiar path. The ordinary green overhead turns gold, the shadows stretch across the ground, and even the way you walked yesterday feels newly discovered.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading {\"level\":2,\"className\":\"\"} -->\n<h2 class=\"wp-block-heading\">Follow the light</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>We set out with time for a short loop. At the first bend, the trees opened just enough to let the sun reach the path. It was the kind of light that makes you stop mid-sentence. So we stopped talking for a moment and watched it move.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>Further on, the same light caught the edges of the leaves. A perfectly ordinary stretch of woodland had become somewhere worth lingering. We had not gone far. We had simply arrived at a different hour.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading {\"level\":2,\"className\":\"\"} -->\n<h2 class=\"wp-block-heading\">A familiar place, again</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>There is comfort in returning to a place you know. You stop looking for the right turning and start noticing everything around it. The old stump. The curve of a branch. The quiet hollow where the air always feels a little cooler.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>By the time the path returned us to the gate, the gold was beginning to fade. We had walked the same loop as always, but it had given us an entirely different evening.</p>\n<!-- /wp:paragraph -->\n<!-- wp:quote {\"className\":\"fn-quote\"} -->\n<blockquote class=\"wp-block-quote fn-quote\"><!-- wp:paragraph -->\n<p>A new perspective can be as simple as the same walk at a different hour.</p>\n<!-- /wp:paragraph -->\n</blockquote>\n<!-- /wp:quote -->\n<!-- wp:group {\"className\":\"fn-try-note\"} -->\n<div class=\"wp-block-group fn-try-note\"><!-- wp:heading {\"level\":2,\"className\":\"\"} -->\n<h2 class=\"wp-block-heading\">A small thing to try</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>Visit a familiar outdoor place at a time you usually miss. Notice three things that look, sound, or feel different.</p>\n<!-- /wp:paragraph -->\n</div>\n<!-- /wp:group -->\n<!-- wp:paragraph {\"className\":\"fn-photo-credit\"} -->\n<p class=\"fn-photo-credit\">Photo by <a rel=\"noopener\" target=\"_blank\" href=\"https://wordpress.org/photos/photo/79635261b4/\">Roy Tanck</a> · WordPress Photo Directory · CC0.</p>\n<!-- /wp:paragraph -->\n",
+      "post_title": "A path worth taking your time on",
+      "post_excerpt": "Following the evening light through the trees, without trying to be anywhere before it disappears.",
+      "post_status": "publish",
+      "comment_status": "closed",
+      "ping_status": "closed",
+      "post_name": "a-path-worth-taking-your-time-on",
+      "post_modified": "2026-11-04 00:41:47",
+      "post_modified_gmt": "2026-11-04 00:41:47",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/a-path-worth-taking-your-time-on/",
+      "menu_order": 0,
+      "post_type": "post",
+      "post_mime_type": "",
+      "comment_count": 0
+    },
+    {
+      "ID": 12,
+      "post_date": "2026-10-17 09:00:00",
+      "post_date_gmt": "2026-10-17 09:00:00",
+      "post_content": "<!-- wp:paragraph {\"dropCap\":true,\"className\":\"fn-lede\"} -->\n<p class=\"has-drop-cap fn-lede\">A shoreline is a good place to let a plan become a suggestion. There is always another curve of sand, another cluster of rocks, another patch of water catching the light.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading {\"level\":2,\"className\":\"\"} -->\n<h2 class=\"wp-block-heading\">One more bend</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>The idea was to walk until we found somewhere to sit. We passed several perfectly good places. Each time, there was something just ahead that deserved a closer look: a bright line of foam, a smooth stone, a small pool left behind by a wave.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>Soon our pockets held a few pebbles and our conversation had settled into the rhythm of the water. The coast did most of the talking. We were happy to listen.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading {\"level\":2,\"className\":\"\"} -->\n<h2 class=\"wp-block-heading\">A place to pause</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>Eventually we found a patch of shade and stayed there. The view was no better than the one we had started with. It was simply the one we had taken time to reach.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>Waves folded over the rocks and pulled back again. A cloud moved slowly out over the water. We left the pebbles where we had found them and carried the afternoon home instead.</p>\n<!-- /wp:paragraph -->\n<!-- wp:quote {\"className\":\"fn-quote\"} -->\n<blockquote class=\"wp-block-quote fn-quote\"><!-- wp:paragraph -->\n<p>You don’t always need a destination. Sometimes a direction will do.</p>\n<!-- /wp:paragraph -->\n</blockquote>\n<!-- /wp:quote -->\n<!-- wp:group {\"className\":\"fn-try-note\"} -->\n<div class=\"wp-block-group fn-try-note\"><!-- wp:heading {\"level\":2,\"className\":\"\"} -->\n<h2 class=\"wp-block-heading\">A small thing to try</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>Find a safe stretch of shoreline, riverside, or park path. Leave enough time to stop somewhere without checking the clock.</p>\n<!-- /wp:paragraph -->\n</div>\n<!-- /wp:group -->\n<!-- wp:paragraph {\"className\":\"fn-photo-credit\"} -->\n<p class=\"fn-photo-credit\">Photo by <a rel=\"noopener\" target=\"_blank\" href=\"https://wordpress.org/photos/photo/60162fd3c9/\">Roy Tanck</a> · WordPress Photo Directory · CC0.</p>\n<!-- /wp:paragraph -->\n",
+      "post_title": "A little further along the coast",
+      "post_excerpt": "Salt in the air, a pocket full of pebbles, and a good reason to keep looking around the next bend.",
+      "post_status": "publish",
+      "comment_status": "closed",
+      "ping_status": "closed",
+      "post_name": "a-little-further-along-the-coast",
+      "post_modified": "2026-11-04 00:41:47",
+      "post_modified_gmt": "2026-11-04 00:41:47",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/a-little-further-along-the-coast/",
+      "menu_order": 0,
+      "post_type": "post",
+      "post_mime_type": "",
+      "comment_count": 0
+    },
+    {
+      "ID": 13,
+      "post_date": "2026-10-14 09:00:00",
+      "post_date_gmt": "2026-10-14 09:00:00",
+      "post_content": "<!-- wp:paragraph {\"dropCap\":true,\"className\":\"fn-lede\"} -->\n<p class=\"has-drop-cap fn-lede\">The path disappeared a little way ahead. Not entirely, just enough that the next stretch felt separate from everything behind it. There was no grand view to wait for. The mist was the view.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading {\"level\":2,\"className\":\"\"} -->\n<h2 class=\"wp-block-heading\">A smaller world</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>On clear days, we tend to look towards whatever is furthest away. A ridge, a horizon, the end of a long road. In the mist, the world became smaller. A handful of branches. Damp stone. The quiet shape of the next tree.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>We walked a little more carefully and looked a little more closely. The forest did not need to offer anything spectacular. There was plenty to notice in the few metres around us.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading {\"level\":2,\"className\":\"\"} -->\n<h2 class=\"wp-block-heading\">Enough for now</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>After a while, we stopped trying to work out whether the weather would clear. The morning was already happening. Waiting for it to become something else seemed like a good way to miss it.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>A drop of water fell from a leaf. Somewhere ahead, someone laughed. We kept walking, content to discover the trail a little at a time.</p>\n<!-- /wp:paragraph -->\n<!-- wp:quote {\"className\":\"fn-quote\"} -->\n<blockquote class=\"wp-block-quote fn-quote\"><!-- wp:paragraph -->\n<p>There is a lot to see when you stop waiting for a better view.</p>\n<!-- /wp:paragraph -->\n</blockquote>\n<!-- /wp:quote -->\n<!-- wp:group {\"className\":\"fn-try-note\"} -->\n<div class=\"wp-block-group fn-try-note\"><!-- wp:heading {\"level\":2,\"className\":\"\"} -->\n<h2 class=\"wp-block-heading\">A small thing to try</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>Spend five quiet minutes looking at what is close by. A window ledge, a garden corner, or a single tree is enough to begin.</p>\n<!-- /wp:paragraph -->\n</div>\n<!-- /wp:group -->\n<!-- wp:paragraph {\"className\":\"fn-photo-credit\"} -->\n<p class=\"fn-photo-credit\">Photo by <a rel=\"noopener\" target=\"_blank\" href=\"https://wordpress.org/photos/photo/8416a9f5b3/\">annezazu</a> · WordPress Photo Directory · CC0.</p>\n<!-- /wp:paragraph -->\n",
+      "post_title": "What a quiet morning looks like",
+      "post_excerpt": "A little mist, a familiar trail, and a morning that asks very little of you.",
+      "post_status": "publish",
+      "comment_status": "closed",
+      "ping_status": "closed",
+      "post_name": "what-a-quiet-morning-looks-like",
+      "post_modified": "2026-11-04 00:41:47",
+      "post_modified_gmt": "2026-11-04 00:41:47",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/what-a-quiet-morning-looks-like/",
+      "menu_order": 0,
+      "post_type": "post",
+      "post_mime_type": "",
+      "comment_count": 0
+    },
+    {
+      "ID": 14,
+      "post_date": "2026-10-11 09:00:00",
+      "post_date_gmt": "2026-10-11 09:00:00",
+      "post_content": "<!-- wp:paragraph {\"dropCap\":true,\"className\":\"fn-lede\"} -->\n<p class=\"has-drop-cap fn-lede\">You can pass the same patch of grass a hundred times before you notice what grows in it. Then, one evening, the light catches a flower and the whole place becomes interesting.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading {\"level\":2,\"className\":\"\"} -->\n<h2 class=\"wp-block-heading\">Start with one thing</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>Choose something small enough to look at properly. The shape of a leaf. The different colours in a stone. A flower leaning towards the last of the sun. There is no right choice, and no need to know its name.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>Look again after a minute. You will probably notice something you missed the first time. A fine edge. A second colour. A tiny movement. Attention makes even a very small place feel larger.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading {\"level\":2,\"className\":\"\"} -->\n<h2 class=\"wp-block-heading\">Keep a little record</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>A notebook helps, but the note can be simple. Three words about the colour of the sky. A rough sketch of a branch. The time you heard a bird start singing. You are making a place for the moment to stay.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>Over time, these small records become their own kind of map. They show where you have been paying attention, and remind you how much there is to find without going very far.</p>\n<!-- /wp:paragraph -->\n<!-- wp:quote {\"className\":\"fn-quote\"} -->\n<blockquote class=\"wp-block-quote fn-quote\"><!-- wp:paragraph -->\n<p>Curiosity is something you can practise on the way home.</p>\n<!-- /wp:paragraph -->\n</blockquote>\n<!-- /wp:quote -->\n<!-- wp:group {\"className\":\"fn-try-note\"} -->\n<div class=\"wp-block-group fn-try-note\"><!-- wp:heading {\"level\":2,\"className\":\"\"} -->\n<h2 class=\"wp-block-heading\">A small thing to try</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>Write down three small things you noticed today. Keep each note to one sentence. Try again tomorrow, in the same place.</p>\n<!-- /wp:paragraph -->\n</div>\n<!-- /wp:group -->\n<!-- wp:heading {\"level\":2,\"className\":\"\"} -->\n<h2 class=\"wp-block-heading\">Two kinds of evening light</h2>\n<!-- /wp:heading -->\n<!-- wp:gallery {\"columns\":2,\"linkTo\":\"none\"} -->\n<figure class=\"wp-block-gallery has-nested-images columns-2 is-cropped\"><!-- wp:image {\"id\":7,\"sizeSlug\":\"full\",\"linkDestination\":\"none\",\"className\":\"\"} -->\n<figure class=\"wp-block-image size-full\"><img src=\"{{site_url}}/wp-content/uploads/2026/10/field-notes-meadow.webp\" alt=\"Wildflowers in a meadow beneath a warm evening sky.\" class=\"wp-image-7\"/><figcaption class=\"wp-element-caption\">The last light over a meadow. Photo: Nilo Velez.</figcaption></figure>\n<!-- /wp:image -->\n<!-- wp:image {\"id\":5,\"sizeSlug\":\"full\",\"linkDestination\":\"none\",\"className\":\"\"} -->\n<figure class=\"wp-block-image size-full\"><img src=\"{{site_url}}/wp-content/uploads/2026/10/field-notes-forest.webp\" alt=\"A woodland path lit by the evening sun.\" class=\"wp-image-5\"/><figcaption class=\"wp-element-caption\">A woodland path catching the sun. Photo: Roy Tanck.</figcaption></figure>\n<!-- /wp:image -->\n</figure>\n<!-- /wp:gallery -->\n<!-- wp:paragraph {\"className\":\"fn-photo-credit\"} -->\n<p class=\"fn-photo-credit\">Photo by <a rel=\"noopener\" target=\"_blank\" href=\"https://wordpress.org/photos/photo/726632647a/\">Nilo Velez</a> · WordPress Photo Directory · CC0.</p>\n<!-- /wp:paragraph -->\n",
+      "post_title": "A pocket guide to paying attention",
+      "post_excerpt": "No special equipment. No faraway place. Just a little practice at seeing what is already there.",
+      "post_status": "publish",
+      "comment_status": "closed",
+      "ping_status": "closed",
+      "post_name": "a-pocket-guide-to-paying-attention",
+      "post_modified": "2026-11-04 00:41:47",
+      "post_modified_gmt": "2026-11-04 00:41:47",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/a-pocket-guide-to-paying-attention/",
+      "menu_order": 0,
+      "post_type": "post",
+      "post_mime_type": "",
+      "comment_count": 0
+    },
+    {
+      "ID": 15,
+      "post_date": "2026-10-08 09:00:00",
+      "post_date_gmt": "2026-10-08 09:00:00",
+      "post_content": "<!-- wp:paragraph {\"dropCap\":true,\"className\":\"fn-lede\"} -->\n<p class=\"has-drop-cap fn-lede\">We had brought a map, a notebook, and more plans than the afternoon needed. The lake was still. The hillside was quiet. We put the map away.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading {\"level\":2,\"className\":\"\"} -->\n<h2 class=\"wp-block-heading\">An unscheduled stop</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>At first, staying still felt like a pause before the next activity. We checked the path ahead, talked about the way back, and wondered how long we ought to sit. Then the conversation drifted, and sitting became the activity.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>The view changed without asking us to go anywhere. Mist moved over the far side of the water. The colour of the hillside softened. A ripple reached the shore and disappeared.</p>\n<!-- /wp:paragraph -->\n<!-- wp:heading {\"level\":2,\"className\":\"\"} -->\n<h2 class=\"wp-block-heading\">Leave something unfilled</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>An afternoon does not have to be packed to feel well spent. Sometimes the part you remember is the empty space between two plans: a bench, an unhurried cup of tea, a few minutes beside the water.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>We opened the notebook before leaving. There was very little to write down. A place. A colour. A good feeling. It seemed like enough.</p>\n<!-- /wp:paragraph -->\n<!-- wp:quote {\"className\":\"fn-quote\"} -->\n<blockquote class=\"wp-block-quote fn-quote\"><!-- wp:paragraph -->\n<p>Leave a little space in the day. Something good might find it.</p>\n<!-- /wp:paragraph -->\n</blockquote>\n<!-- /wp:quote -->\n<!-- wp:group {\"className\":\"fn-try-note\"} -->\n<div class=\"wp-block-group fn-try-note\"><!-- wp:heading {\"level\":2,\"className\":\"\"} -->\n<h2 class=\"wp-block-heading\">A small thing to try</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>Leave fifteen minutes unplanned this week. Find somewhere comfortable, put your phone away, and see what fills the space.</p>\n<!-- /wp:paragraph -->\n</div>\n<!-- /wp:group -->\n<!-- wp:paragraph {\"className\":\"fn-photo-credit\"} -->\n<p class=\"fn-photo-credit\">Photo by <a rel=\"noopener\" target=\"_blank\" href=\"https://wordpress.org/photos/photo/68464393ec/\">Niels Oneglio</a> · WordPress Photo Directory · CC0.</p>\n<!-- /wp:paragraph -->\n",
+      "post_title": "The art of going nowhere",
+      "post_excerpt": "A good view, a place to sit, and an afternoon with a little space left in it.",
+      "post_status": "publish",
+      "comment_status": "closed",
+      "ping_status": "closed",
+      "post_name": "the-art-of-going-nowhere",
+      "post_modified": "2026-11-04 00:41:47",
+      "post_modified_gmt": "2026-11-04 00:41:47",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/the-art-of-going-nowhere/",
+      "menu_order": 0,
+      "post_type": "post",
+      "post_mime_type": "",
+      "comment_count": 0
+    },
+    {
+      "ID": 16,
+      "post_date": "2026-11-01 20:36:59",
+      "post_date_gmt": "2026-11-01 20:36:59",
+      "post_content": "",
+      "post_title": "Journal",
+      "post_excerpt": "",
+      "post_status": "publish",
+      "comment_status": "closed",
+      "ping_status": "closed",
+      "post_name": "journal",
+      "post_modified": "2026-11-01 20:36:59",
+      "post_modified_gmt": "2026-11-01 20:36:59",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/journal/",
+      "menu_order": 0,
+      "post_type": "page",
+      "post_mime_type": "",
+      "comment_count": 0
+    },
+    {
+      "ID": 17,
+      "post_date": "2026-11-01 20:36:59",
+      "post_date_gmt": "2026-11-01 20:36:59",
+      "post_content": "<!-- wp:group {\"className\":\"fn-shell fn-about-page\"} -->\n<div class=\"wp-block-group fn-shell fn-about-page\"><!-- wp:group {\"className\":\"fn-page-heading\"} -->\n<div class=\"wp-block-group fn-page-heading\"><!-- wp:heading {\"level\":1,\"className\":\"fn-page-title\"} -->\n<h1 class=\"wp-block-heading fn-page-title\">Curiosity is<br><em>a good compass.</em></h1>\n<!-- /wp:heading -->\n<!-- wp:paragraph {\"className\":\"fn-page-intro\"} -->\n<p class=\"fn-page-intro\">A fictional nature journal, made as a sample site for Reprint.</p>\n<!-- /wp:paragraph -->\n</div>\n<!-- /wp:group -->\n<!-- wp:group {\"className\":\"fn-about-page-grid\"} -->\n<div class=\"wp-block-group fn-about-page-grid\"><!-- wp:image {\"id\":7,\"sizeSlug\":\"full\",\"linkDestination\":\"none\",\"className\":\"fn-about-page-image\"} -->\n<figure class=\"wp-block-image size-full fn-about-page-image\"><img src=\"{{site_url}}/wp-content/uploads/2026/10/field-notes-meadow.webp\" alt=\"Wildflowers in a meadow beneath a warm evening sky.\" class=\"wp-image-7\"/></figure>\n<!-- /wp:image -->\n<!-- wp:group {\"className\":\"fn-about-page-copy\"} -->\n<div class=\"wp-block-group fn-about-page-copy\"><!-- wp:heading {\"level\":2,\"className\":\"\"} -->\n<h2 class=\"wp-block-heading\">There’s a story<br>in the small things.</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>A bend in a familiar path. Light moving across a quiet lake. The last few minutes before a meadow slips into evening. Reprint Field Notes is a place to slow down and look a little closer.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph -->\n<p>Our sample stories celebrate ordinary adventures: the ones that fit into a free morning, an unexpected afternoon, or the short walk home.</p>\n<!-- /wp:paragraph -->\n</div>\n<!-- /wp:group -->\n</div>\n<!-- /wp:group -->\n<!-- wp:group {\"anchor\":\"photo-credits\",\"className\":\"fn-photo-credits\"} -->\n<div id=\"photo-credits\" class=\"wp-block-group fn-photo-credits\"><!-- wp:heading {\"level\":2,\"className\":\"\"} -->\n<h2 class=\"wp-block-heading\">A thank-you to the photographers.</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>These photos come from the <a rel=\"noopener\" target=\"_blank\" href=\"https://wordpress.org/photos/\">WordPress Photo Directory</a> and are shared under <a rel=\"noopener\" target=\"_blank\" href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a>. Copies are stored in this site’s Media Library.</p>\n<!-- /wp:paragraph -->\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li><a rel=\"noopener\" target=\"_blank\" href=\"https://wordpress.org/photos/photo/9436a22d4f/\">Lake</a> — Laxman Bhattarai</li>\n<!-- /wp:list-item -->\n<!-- wp:list-item -->\n<li><a rel=\"noopener\" target=\"_blank\" href=\"https://wordpress.org/photos/photo/79635261b4/\">Forest</a> — Roy Tanck</li>\n<!-- /wp:list-item -->\n<!-- wp:list-item -->\n<li><a rel=\"noopener\" target=\"_blank\" href=\"https://wordpress.org/photos/photo/60162fd3c9/\">Coast</a> — Roy Tanck</li>\n<!-- /wp:list-item -->\n<!-- wp:list-item -->\n<li><a rel=\"noopener\" target=\"_blank\" href=\"https://wordpress.org/photos/photo/726632647a/\">Meadow</a> — Nilo Velez</li>\n<!-- /wp:list-item -->\n<!-- wp:list-item -->\n<li><a rel=\"noopener\" target=\"_blank\" href=\"https://wordpress.org/photos/photo/8416a9f5b3/\">Mist</a> — annezazu</li>\n<!-- /wp:list-item -->\n<!-- wp:list-item -->\n<li><a rel=\"noopener\" target=\"_blank\" href=\"https://wordpress.org/photos/photo/68464393ec/\">Mountain</a> — Niels Oneglio</li>\n<!-- /wp:list-item -->\n</ul>\n<!-- /wp:list -->\n</div>\n<!-- /wp:group -->\n</div>\n<!-- /wp:group -->\n",
+      "post_title": "About",
+      "post_excerpt": "",
+      "post_status": "publish",
+      "comment_status": "closed",
+      "ping_status": "closed",
+      "post_name": "about",
+      "post_modified": "2026-11-04 00:41:47",
+      "post_modified_gmt": "2026-11-04 00:41:47",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/about/",
+      "menu_order": 0,
+      "post_type": "page",
+      "post_mime_type": "",
+      "comment_count": 0
+    },
+    {
+      "ID": 18,
+      "post_date": "2026-11-01 20:36:59",
+      "post_date_gmt": "2026-11-01 20:36:59",
+      "post_content": "<!-- wp:group {\"className\":\"fn-shell fn-reprint-page\"} -->\n<div class=\"wp-block-group fn-shell fn-reprint-page\"><!-- wp:group {\"className\":\"fn-page-heading\"} -->\n<div class=\"wp-block-group fn-page-heading\"><!-- wp:heading {\"level\":1,\"className\":\"fn-page-title\"} -->\n<h1 class=\"wp-block-heading fn-page-title\">Copy this site.</h1>\n<!-- /wp:heading -->\n<!-- wp:paragraph {\"className\":\"fn-page-intro\"} -->\n<p class=\"fn-page-intro\">Reprint copies this site, its files and its database, into a folder on your computer.</p>\n<!-- /wp:paragraph -->\n</div>\n<!-- /wp:group -->\n<!-- wp:group {\"className\":\"fn-try\"} -->\n<div class=\"wp-block-group fn-try\"><!-- wp:group {\"className\":\"fn-choice\"} -->\n<div class=\"wp-block-group fn-choice\"><!-- wp:heading {\"level\":2,\"className\":\"fn-choice-title\"} -->\n<h2 class=\"wp-block-heading fn-choice-title\">On your computer</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph {\"className\":\"fn-choice-need\"} -->\n<p class=\"fn-choice-need\">You need PHP with SQLite.</p>\n<!-- /wp:paragraph -->\n<!-- wp:group {\"className\":\"fn-terminal\"} -->\n<div class=\"wp-block-group fn-terminal\"><!-- wp:paragraph {\"className\":\"fn-terminal-bar\"} -->\n<p class=\"fn-terminal-bar\">Terminal</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph {\"className\":\"fn-terminal-say\"} -->\n<p class=\"fn-terminal-say\">Download Reprint</p>\n<!-- /wp:paragraph -->\n<!-- wp:code {\"className\":\"fn-cli-command\"} -->\n<pre class=\"wp-block-code fn-cli-command\"><code>curl -LO https://plugins.svn.wordpress.org/reprint/downloads/reprint.phar</code></pre>\n<!-- /wp:code -->\n<!-- wp:paragraph {\"className\":\"fn-terminal-say\"} -->\n<p class=\"fn-terminal-say\">Copy this site</p>\n<!-- /wp:paragraph -->\n<!-- wp:code {\"className\":\"fn-cli-command\"} -->\n<pre class=\"wp-block-code fn-cli-command\"><code>php reprint.phar pull https://reprint-demo.wordpress.net \\\n  --state-dir=./state --fs-root=./files \\\n  --port=8881 --new-site-url=http://localhost:8881 \\\n  --secret=public-demo</code></pre>\n<!-- /wp:code -->\n</div>\n<!-- /wp:group -->\n<!-- wp:paragraph {\"className\":\"fn-pending\"} -->\n<p class=\"fn-pending\">No key or account is needed for the public demo.</p>\n<!-- /wp:paragraph -->\n</div>\n<!-- /wp:group -->\n<!-- wp:group {\"className\":\"fn-choice\"} -->\n<div class=\"wp-block-group fn-choice\"><!-- wp:heading {\"level\":2,\"className\":\"fn-choice-title\"} -->\n<h2 class=\"wp-block-heading fn-choice-title\">In your browser</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph {\"className\":\"fn-choice-need\"} -->\n<p class=\"fn-choice-need\">Nothing to install.</p>\n<!-- /wp:paragraph -->\n<!-- wp:buttons -->\n<div class=\"wp-block-buttons\"><!-- wp:button -->\n<div class=\"wp-block-button\"><a rel=\"noopener\" target=\"_blank\" class=\"wp-block-button__link wp-element-button\" href=\"https://playground.wordpress.net/?clone-site=https%3A%2F%2Freprint-demo.wordpress.net\">Open Playground</a></div>\n<!-- /wp:button -->\n</div>\n<!-- /wp:buttons -->\n<!-- wp:paragraph {\"className\":\"fn-pending\"} -->\n<p class=\"fn-pending\">Copying in Playground isn’t open yet. For now this opens Playground’s own sample site.</p>\n<!-- /wp:paragraph -->\n</div>\n<!-- /wp:group -->\n</div>\n<!-- /wp:group -->\n</div>\n<!-- /wp:group -->\n",
+      "post_title": "Try Reprint",
+      "post_excerpt": "",
+      "post_status": "publish",
+      "comment_status": "closed",
+      "ping_status": "closed",
+      "post_name": "try-reprint",
+      "post_modified": "2026-11-04 00:41:47",
+      "post_modified_gmt": "2026-11-04 00:41:47",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/try-reprint/",
+      "menu_order": 0,
+      "post_type": "page",
+      "post_mime_type": "",
+      "comment_count": 0
+    },
+    {
+      "ID": 19,
+      "post_date": "2026-11-01 20:36:59",
+      "post_date_gmt": "2026-11-01 20:36:59",
+      "post_content": "<!-- wp:group {\"className\":\"fn-shell fn-hero\"} -->\n<div class=\"wp-block-group fn-shell fn-hero\"><!-- wp:group {\"className\":\"fn-hero-copy\"} -->\n<div class=\"wp-block-group fn-hero-copy\"><!-- wp:heading {\"level\":1,\"className\":\"fn-hero-title\"} -->\n<h1 class=\"wp-block-heading fn-hero-title\">A site worth<br><em>copying.</em></h1>\n<!-- /wp:heading -->\n<!-- wp:paragraph {\"className\":\"fn-hero-description\"} -->\n<p class=\"fn-hero-description\">Reprint Field Notes is a sample WordPress site: six stories, six photographs, four pages. Reprint copies all of it, files and database, to your computer.</p>\n<!-- /wp:paragraph -->\n<!-- wp:group {\"className\":\"fn-actions\",\"layout\":{\"type\":\"flex\",\"flexWrap\":\"wrap\",\"verticalAlignment\":\"center\"}} -->\n<div class=\"wp-block-group fn-actions\"><!-- wp:buttons -->\n<div class=\"wp-block-buttons\"><!-- wp:button -->\n<div class=\"wp-block-button\"><a class=\"wp-block-button__link wp-element-button\" href=\"#copy\">Copy this site</a></div>\n<!-- /wp:button -->\n</div>\n<!-- /wp:buttons -->\n<!-- wp:paragraph {\"className\":\"fn-or-link\"} -->\n<p class=\"fn-or-link\">or <a rel=\"noopener\" target=\"_blank\" href=\"https://wordpress.org/reprint/\">read about Reprint</a></p>\n<!-- /wp:paragraph -->\n</div>\n<!-- /wp:group -->\n</div>\n<!-- /wp:group -->\n<!-- wp:image {\"id\":8,\"sizeSlug\":\"full\",\"linkDestination\":\"custom\",\"className\":\"fn-hero-image\"} -->\n<figure class=\"wp-block-image size-full fn-hero-image\"><a href=\"{{site_url}}/what-a-quiet-morning-looks-like/\"><img src=\"{{site_url}}/wp-content/uploads/2026/10/field-notes-mist.webp\" alt=\"A walker looking along a foggy forest trail.\" class=\"wp-image-8\"/></a><figcaption class=\"wp-element-caption\">From the journal: <a href=\"{{site_url}}/what-a-quiet-morning-looks-like/\">What a quiet morning looks like</a></figcaption></figure>\n<!-- /wp:image -->\n</div>\n<!-- /wp:group -->\n<!-- wp:group {\"anchor\":\"copy\",\"className\":\"fn-shell fn-copy\"} -->\n<div id=\"copy\" class=\"wp-block-group fn-shell fn-copy\"><!-- wp:group {\"className\":\"fn-section-heading\"} -->\n<div class=\"wp-block-group fn-section-heading\"><!-- wp:heading {\"level\":2,\"className\":\"fn-section-title\"} -->\n<h2 class=\"wp-block-heading fn-section-title\">Copy this site</h2>\n<!-- /wp:heading -->\n</div>\n<!-- /wp:group -->\n<!-- wp:group {\"className\":\"fn-try\"} -->\n<div class=\"wp-block-group fn-try\"><!-- wp:group {\"className\":\"fn-choice\"} -->\n<div class=\"wp-block-group fn-choice\"><!-- wp:heading {\"level\":3,\"className\":\"fn-choice-title\"} -->\n<h3 class=\"wp-block-heading fn-choice-title\">On your computer</h3>\n<!-- /wp:heading -->\n<!-- wp:paragraph {\"className\":\"fn-choice-need\"} -->\n<p class=\"fn-choice-need\">You need PHP with SQLite.</p>\n<!-- /wp:paragraph -->\n<!-- wp:group {\"className\":\"fn-terminal\"} -->\n<div class=\"wp-block-group fn-terminal\"><!-- wp:paragraph {\"className\":\"fn-terminal-bar\"} -->\n<p class=\"fn-terminal-bar\">Terminal</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph {\"className\":\"fn-terminal-say\"} -->\n<p class=\"fn-terminal-say\">Download Reprint</p>\n<!-- /wp:paragraph -->\n<!-- wp:code {\"className\":\"fn-cli-command\"} -->\n<pre class=\"wp-block-code fn-cli-command\"><code>curl -fL https://plugins.svn.wordpress.org/reprint/downloads/reprint.phar -o reprint.phar</code></pre>\n<!-- /wp:code -->\n<!-- wp:paragraph {\"className\":\"fn-terminal-say\"} -->\n<p class=\"fn-terminal-say\">Copy this site</p>\n<!-- /wp:paragraph -->\n<!-- wp:code {\"className\":\"fn-cli-command\"} -->\n<pre class=\"wp-block-code fn-cli-command\"><code>php reprint.phar pull https://reprint-demo.wordpress.net \\\n  --state-dir=./state --fs-root=./files \\\n  --port=8881 --new-site-url=http://localhost:8881 \\\n  --secret=public-demo</code></pre>\n<!-- /wp:code -->\n</div>\n<!-- /wp:group -->\n</div>\n<!-- /wp:group -->\n<!-- wp:group {\"className\":\"fn-choice\"} -->\n<div class=\"wp-block-group fn-choice\"><!-- wp:heading {\"level\":3,\"className\":\"fn-choice-title\"} -->\n<h3 class=\"wp-block-heading fn-choice-title\">In your browser</h3>\n<!-- /wp:heading -->\n<!-- wp:paragraph {\"className\":\"fn-choice-need\"} -->\n<p class=\"fn-choice-need\">Nothing to install.</p>\n<!-- /wp:paragraph -->\n<!-- wp:buttons -->\n<div class=\"wp-block-buttons\"><!-- wp:button -->\n<div class=\"wp-block-button\"><a rel=\"noopener\" target=\"_blank\" class=\"wp-block-button__link wp-element-button\" href=\"https://playground.wordpress.net/?clone-site=https%3A%2F%2Freprint-demo.wordpress.net\">Open Playground</a></div>\n<!-- /wp:button -->\n</div>\n<!-- /wp:buttons -->\n</div>\n<!-- /wp:group -->\n</div>\n<!-- /wp:group -->\n</div>\n<!-- /wp:group -->\n<!-- wp:group {\"className\":\"fn-shell fn-front\"} -->\n<div class=\"wp-block-group fn-shell fn-front\"><!-- wp:group {\"className\":\"fn-section-heading\"} -->\n<div class=\"wp-block-group fn-section-heading\"><!-- wp:heading {\"level\":2,\"className\":\"fn-section-title\"} -->\n<h2 class=\"wp-block-heading fn-section-title\">From the journal</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph {\"className\":\"fn-text-link\"} -->\n<p class=\"fn-text-link\"><a href=\"{{site_url}}/journal/\">All six stories</a></p>\n<!-- /wp:paragraph -->\n</div>\n<!-- /wp:group -->\n<!-- wp:query {\"queryId\":0,\"query\":{\"perPage\":5,\"pages\":0,\"offset\":0,\"postType\":\"post\",\"order\":\"desc\",\"orderBy\":\"date\",\"author\":\"\",\"search\":\"\",\"exclude\":[13],\"sticky\":\"\",\"inherit\":false},\"className\":\"fn-stories fn-stories--front\"} -->\n<div class=\"wp-block-query fn-stories fn-stories--front\"><!-- wp:post-template {\"layout\":{\"type\":\"grid\",\"columnCount\":3}} -->\n<!-- wp:post-featured-image {\"isLink\":true,\"className\":\"fn-card-image\"} /-->\n<!-- wp:post-terms {\"term\":\"category\",\"className\":\"fn-card-category\"} /-->\n<!-- wp:post-title {\"level\":3,\"isLink\":true,\"className\":\"fn-card-title\"} /-->\n<!-- wp:post-excerpt {\"moreText\":\"\",\"excerptLength\":24,\"showMoreOnNewLine\":false,\"className\":\"fn-card-excerpt\"} /-->\n<!-- wp:post-date {\"format\":\"F j, Y\",\"className\":\"fn-card-date\"} /-->\n\n<!-- /wp:post-template -->\n</div>\n<!-- /wp:query -->\n</div>\n<!-- /wp:group -->\n<!-- wp:group {\"className\":\"fn-band\"} -->\n<div class=\"wp-block-group fn-band\"><!-- wp:heading {\"level\":2,\"className\":\"fn-band-title\"} -->\n<h2 class=\"wp-block-heading fn-band-title\">Less scrolling.<br><em>More noticing.</em></h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph {\"className\":\"fn-band-text\"} -->\n<p class=\"fn-band-text\">You don’t need a plane ticket to find a fresh perspective. Sometimes it’s a different turning, an unhurried morning, or five minutes with nowhere to be.</p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph {\"className\":\"fn-text-link\"} -->\n<p class=\"fn-text-link\"><a href=\"{{site_url}}/about/\">About the journal</a></p>\n<!-- /wp:paragraph -->\n</div>\n<!-- /wp:group -->\n",
+      "post_title": "Home",
+      "post_excerpt": "",
+      "post_status": "publish",
+      "comment_status": "closed",
+      "ping_status": "closed",
+      "post_name": "home",
+      "post_modified": "2026-11-04 14:26:59",
+      "post_modified_gmt": "2026-11-04 14:26:59",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/home/",
+      "menu_order": 0,
+      "post_type": "page",
+      "post_mime_type": "",
+      "comment_count": 0
+    },
+    {
+      "ID": 20,
+      "post_date": "2026-11-01 20:36:59",
+      "post_date_gmt": "2026-11-01 20:36:59",
+      "post_content": "<!-- wp:group {\"className\":\"fn-shell fn-header\",\"layout\":{\"type\":\"flex\",\"justifyContent\":\"space-between\",\"flexWrap\":\"nowrap\"}} -->\n<div class=\"wp-block-group fn-shell fn-header\"><!-- wp:group {\"className\":\"fn-brand\",\"layout\":{\"type\":\"flex\",\"flexWrap\":\"nowrap\"}} -->\n<div class=\"wp-block-group fn-brand\"><!-- wp:paragraph {\"className\":\"fn-mark\"} -->\n<p class=\"fn-mark\">✳</p>\n<!-- /wp:paragraph -->\n<!-- wp:site-title {\"level\":0,\"className\":\"fn-wordmark\"} /-->\n</div>\n<!-- /wp:group -->\n<!-- wp:navigation {\"overlayMenu\":\"mobile\",\"className\":\"fn-nav\",\"layout\":{\"type\":\"flex\",\"justifyContent\":\"right\"}} -->\n<!-- wp:navigation-link {\"label\":\"Journal\",\"url\":\"{{site_url}}/journal/\",\"kind\":\"post-type\",\"type\":\"page\",\"id\":16} /-->\n<!-- wp:navigation-link {\"label\":\"About\",\"url\":\"{{site_url}}/about/\",\"kind\":\"post-type\",\"type\":\"page\",\"id\":17} /-->\n<!-- wp:navigation-link {\"label\":\"Copy this site\",\"url\":\"{{site_url}}/#copy\",\"kind\":\"custom\"} /-->\n\n<!-- /wp:navigation -->\n</div>\n<!-- /wp:group -->\n",
+      "post_title": "Reprint Field Notes header",
+      "post_excerpt": "",
+      "post_status": "publish",
+      "comment_status": "closed",
+      "ping_status": "closed",
+      "post_name": "field-notes-header",
+      "post_modified": "2026-11-01 20:36:59",
+      "post_modified_gmt": "2026-11-01 20:36:59",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/field-notes-header/",
+      "menu_order": 0,
+      "post_type": "wp_template_part",
+      "post_mime_type": "",
+      "comment_count": 0
+    },
+    {
+      "ID": 21,
+      "post_date": "2026-11-01 20:36:59",
+      "post_date_gmt": "2026-11-01 20:36:59",
+      "post_content": "<!-- wp:group {\"className\":\"fn-footer\"} -->\n<div class=\"wp-block-group fn-footer\"><!-- wp:group {\"className\":\"fn-shell\"} -->\n<div class=\"wp-block-group fn-shell\"><!-- wp:group {\"className\":\"fn-footer-top\"} -->\n<div class=\"wp-block-group fn-footer-top\"><!-- wp:heading {\"level\":2,\"className\":\"fn-footer-title\"} -->\n<h2 class=\"wp-block-heading fn-footer-title\">Like this place?<br><em>Make it your own.</em></h2>\n<!-- /wp:heading -->\n<!-- wp:group {\"className\":\"fn-footer-intro\"} -->\n<div class=\"wp-block-group fn-footer-intro\"><!-- wp:paragraph -->\n<p>This is a sample site for trying Reprint. Copy it, then change anything you like.</p>\n<!-- /wp:paragraph -->\n<!-- wp:buttons -->\n<div class=\"wp-block-buttons\"><!-- wp:button {\"className\":\"fn-light-button\"} -->\n<div class=\"wp-block-button fn-light-button\"><a class=\"wp-block-button__link wp-element-button\" href=\"{{site_url}}/#copy\">Copy this site</a></div>\n<!-- /wp:button -->\n</div>\n<!-- /wp:buttons -->\n</div>\n<!-- /wp:group -->\n</div>\n<!-- /wp:group -->\n<!-- wp:paragraph {\"className\":\"fn-nameplate\"} -->\n<p class=\"fn-nameplate\">Reprint Field Notes</p>\n<!-- /wp:paragraph -->\n<!-- wp:group {\"className\":\"fn-footer-bottom\"} -->\n<div class=\"wp-block-group fn-footer-bottom\"><!-- wp:paragraph {\"className\":\"fn-footer-links\"} -->\n<p class=\"fn-footer-links\"><a href=\"{{site_url}}/journal/\">Journal</a> <a href=\"{{site_url}}/about/\">About</a> <a href=\"{{site_url}}/about/#photo-credits\">Photo credits</a></p>\n<!-- /wp:paragraph -->\n<!-- wp:paragraph {\"className\":\"fn-footer-credit\"} -->\n<p class=\"fn-footer-credit\">Made with <a rel=\"noopener\" target=\"_blank\" href=\"https://wordpress.org/\">WordPress</a> &amp; <a rel=\"noopener\" target=\"_blank\" href=\"https://wordpress.org/themes/twentytwentyfive/\">Twenty Twenty-Five</a>.</p>\n<!-- /wp:paragraph -->\n</div>\n<!-- /wp:group -->\n</div>\n<!-- /wp:group -->\n</div>\n<!-- /wp:group -->\n<!-- wp:html -->\n<script>addEventListener('load', () => document.documentElement.classList.add('fn-smooth'));</script>\n<!-- /wp:html -->\n",
+      "post_title": "Reprint Field Notes footer",
+      "post_excerpt": "",
+      "post_status": "publish",
+      "comment_status": "closed",
+      "ping_status": "closed",
+      "post_name": "field-notes-footer",
+      "post_modified": "2026-11-04 00:41:47",
+      "post_modified_gmt": "2026-11-04 00:41:47",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/field-notes-footer/",
+      "menu_order": 0,
+      "post_type": "wp_template_part",
+      "post_mime_type": "",
+      "comment_count": 0
+    },
+    {
+      "ID": 22,
+      "post_date": "2026-11-01 20:36:59",
+      "post_date_gmt": "2026-11-01 20:36:59",
+      "post_content": "<!-- wp:template-part {\"slug\":\"field-notes-header\",\"theme\":\"twentytwentyfive\",\"tagName\":\"header\"} /-->\n<!-- wp:group {\"className\":\"fn-main\",\"tagName\":\"main\"} -->\n<main class=\"wp-block-group fn-main\"><!-- wp:post-content /-->\n</main>\n<!-- /wp:group -->\n<!-- wp:template-part {\"slug\":\"field-notes-footer\",\"theme\":\"twentytwentyfive\",\"tagName\":\"footer\"} /-->\n",
+      "post_title": "Reprint Field Notes home",
+      "post_excerpt": "",
+      "post_status": "publish",
+      "comment_status": "closed",
+      "ping_status": "closed",
+      "post_name": "front-page",
+      "post_modified": "2026-11-01 20:36:59",
+      "post_modified_gmt": "2026-11-01 20:36:59",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/front-page/",
+      "menu_order": 0,
+      "post_type": "wp_template",
+      "post_mime_type": "",
+      "comment_count": 0
+    },
+    {
+      "ID": 23,
+      "post_date": "2026-11-01 20:36:59",
+      "post_date_gmt": "2026-11-01 20:36:59",
+      "post_content": "<!-- wp:template-part {\"slug\":\"field-notes-header\",\"theme\":\"twentytwentyfive\",\"tagName\":\"header\"} /-->\n<!-- wp:group {\"className\":\"fn-main\",\"tagName\":\"main\"} -->\n<main class=\"wp-block-group fn-main\"><!-- wp:post-content /-->\n</main>\n<!-- /wp:group -->\n<!-- wp:template-part {\"slug\":\"field-notes-footer\",\"theme\":\"twentytwentyfive\",\"tagName\":\"footer\"} /-->\n",
+      "post_title": "Reprint Field Notes page",
+      "post_excerpt": "",
+      "post_status": "publish",
+      "comment_status": "closed",
+      "ping_status": "closed",
+      "post_name": "page",
+      "post_modified": "2026-11-01 20:36:59",
+      "post_modified_gmt": "2026-11-01 20:36:59",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/page/",
+      "menu_order": 0,
+      "post_type": "wp_template",
+      "post_mime_type": "",
+      "comment_count": 0
+    },
+    {
+      "ID": 24,
+      "post_date": "2026-11-01 20:36:59",
+      "post_date_gmt": "2026-11-01 20:36:59",
+      "post_content": "<!-- wp:template-part {\"slug\":\"field-notes-header\",\"theme\":\"twentytwentyfive\",\"tagName\":\"header\"} /-->\n<!-- wp:group {\"className\":\"fn-main\",\"tagName\":\"main\"} -->\n<main class=\"wp-block-group fn-main\"><!-- wp:group {\"className\":\"fn-shell fn-page-heading\"} -->\n<div class=\"wp-block-group fn-shell fn-page-heading\"><!-- wp:heading {\"level\":1,\"className\":\"fn-page-title\"} -->\n<h1 class=\"wp-block-heading fn-page-title\">A little outside<br><em>the everyday.</em></h1>\n<!-- /wp:heading -->\n<!-- wp:paragraph {\"className\":\"fn-page-intro\"} -->\n<p class=\"fn-page-intro\">Notes from the path, the shoreline, and the things we nearly walked past.</p>\n<!-- /wp:paragraph -->\n</div>\n<!-- /wp:group -->\n<!-- wp:group {\"className\":\"fn-shell fn-journal-grid\"} -->\n<div class=\"wp-block-group fn-shell fn-journal-grid\"><!-- wp:query {\"queryId\":0,\"query\":{\"perPage\":6,\"pages\":0,\"offset\":0,\"postType\":\"post\",\"order\":\"desc\",\"orderBy\":\"date\",\"author\":\"\",\"search\":\"\",\"exclude\":[],\"sticky\":\"\",\"inherit\":true},\"className\":\"fn-stories fn-stories--list\"} -->\n<div class=\"wp-block-query fn-stories fn-stories--list\"><!-- wp:post-template {\"layout\":{\"type\":\"grid\",\"columnCount\":1}} -->\n<!-- wp:post-featured-image {\"isLink\":true,\"className\":\"fn-card-image\"} /-->\n<!-- wp:post-terms {\"term\":\"category\",\"className\":\"fn-card-category\"} /-->\n<!-- wp:post-title {\"level\":2,\"isLink\":true,\"className\":\"fn-card-title\"} /-->\n<!-- wp:post-excerpt {\"moreText\":\"\",\"excerptLength\":24,\"showMoreOnNewLine\":false,\"className\":\"fn-card-excerpt\"} /-->\n<!-- wp:post-date {\"format\":\"F j, Y\",\"className\":\"fn-card-date\"} /-->\n\n<!-- /wp:post-template -->\n<!-- wp:query-pagination {\"layout\":{\"type\":\"flex\",\"justifyContent\":\"center\"}} -->\n<!-- wp:query-pagination-previous /-->\n<!-- wp:query-pagination-numbers /-->\n<!-- wp:query-pagination-next /-->\n\n<!-- /wp:query-pagination -->\n</div>\n<!-- /wp:query -->\n</div>\n<!-- /wp:group -->\n</main>\n<!-- /wp:group -->\n<!-- wp:template-part {\"slug\":\"field-notes-footer\",\"theme\":\"twentytwentyfive\",\"tagName\":\"footer\"} /-->\n",
+      "post_title": "Reprint Field Notes journal",
+      "post_excerpt": "",
+      "post_status": "publish",
+      "comment_status": "closed",
+      "ping_status": "closed",
+      "post_name": "home",
+      "post_modified": "2026-11-01 20:36:59",
+      "post_modified_gmt": "2026-11-01 20:36:59",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/home/",
+      "menu_order": 0,
+      "post_type": "wp_template",
+      "post_mime_type": "",
+      "comment_count": 0
+    },
+    {
+      "ID": 25,
+      "post_date": "2026-11-01 20:36:59",
+      "post_date_gmt": "2026-11-01 20:36:59",
+      "post_content": "<!-- wp:template-part {\"slug\":\"field-notes-header\",\"theme\":\"twentytwentyfive\",\"tagName\":\"header\"} /-->\n<!-- wp:group {\"className\":\"fn-main\",\"tagName\":\"main\"} -->\n<main class=\"wp-block-group fn-main\"><!-- wp:group {\"className\":\"fn-shell fn-page-heading\"} -->\n<div class=\"wp-block-group fn-shell fn-page-heading\"><!-- wp:query-title {\"type\":\"archive\",\"showPrefix\":false,\"className\":\"fn-page-title\"} /-->\n<!-- wp:paragraph {\"className\":\"fn-page-intro\"} -->\n<p class=\"fn-page-intro\">A few good reasons to take your time.</p>\n<!-- /wp:paragraph -->\n</div>\n<!-- /wp:group -->\n<!-- wp:group {\"className\":\"fn-shell fn-journal-grid\"} -->\n<div class=\"wp-block-group fn-shell fn-journal-grid\"><!-- wp:query {\"queryId\":0,\"query\":{\"perPage\":6,\"pages\":0,\"offset\":0,\"postType\":\"post\",\"order\":\"desc\",\"orderBy\":\"date\",\"author\":\"\",\"search\":\"\",\"exclude\":[],\"sticky\":\"\",\"inherit\":true},\"className\":\"fn-stories fn-stories--list\"} -->\n<div class=\"wp-block-query fn-stories fn-stories--list\"><!-- wp:post-template {\"layout\":{\"type\":\"grid\",\"columnCount\":1}} -->\n<!-- wp:post-featured-image {\"isLink\":true,\"className\":\"fn-card-image\"} /-->\n<!-- wp:post-terms {\"term\":\"category\",\"className\":\"fn-card-category\"} /-->\n<!-- wp:post-title {\"level\":2,\"isLink\":true,\"className\":\"fn-card-title\"} /-->\n<!-- wp:post-excerpt {\"moreText\":\"\",\"excerptLength\":24,\"showMoreOnNewLine\":false,\"className\":\"fn-card-excerpt\"} /-->\n<!-- wp:post-date {\"format\":\"F j, Y\",\"className\":\"fn-card-date\"} /-->\n\n<!-- /wp:post-template -->\n<!-- wp:query-pagination {\"layout\":{\"type\":\"flex\",\"justifyContent\":\"center\"}} -->\n<!-- wp:query-pagination-previous /-->\n<!-- wp:query-pagination-numbers /-->\n<!-- wp:query-pagination-next /-->\n\n<!-- /wp:query-pagination -->\n</div>\n<!-- /wp:query -->\n</div>\n<!-- /wp:group -->\n</main>\n<!-- /wp:group -->\n<!-- wp:template-part {\"slug\":\"field-notes-footer\",\"theme\":\"twentytwentyfive\",\"tagName\":\"footer\"} /-->\n",
+      "post_title": "Reprint Field Notes archive",
+      "post_excerpt": "",
+      "post_status": "publish",
+      "comment_status": "closed",
+      "ping_status": "closed",
+      "post_name": "archive",
+      "post_modified": "2026-11-01 20:36:59",
+      "post_modified_gmt": "2026-11-01 20:36:59",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/archive/",
+      "menu_order": 0,
+      "post_type": "wp_template",
+      "post_mime_type": "",
+      "comment_count": 0
+    },
+    {
+      "ID": 26,
+      "post_date": "2026-11-01 20:36:59",
+      "post_date_gmt": "2026-11-01 20:36:59",
+      "post_content": "<!-- wp:template-part {\"slug\":\"field-notes-header\",\"theme\":\"twentytwentyfive\",\"tagName\":\"header\"} /-->\n<!-- wp:group {\"className\":\"fn-main\",\"tagName\":\"main\"} -->\n<main class=\"wp-block-group fn-main\"><!-- wp:group {\"className\":\"fn-shell fn-page-heading\"} -->\n<div class=\"wp-block-group fn-shell fn-page-heading\"><!-- wp:heading {\"level\":1,\"className\":\"fn-page-title\"} -->\n<h1 class=\"wp-block-heading fn-page-title\">A little outside<br><em>the everyday.</em></h1>\n<!-- /wp:heading -->\n<!-- wp:paragraph {\"className\":\"fn-page-intro\"} -->\n<p class=\"fn-page-intro\">Notes from the path, the shoreline, and the things we nearly walked past.</p>\n<!-- /wp:paragraph -->\n</div>\n<!-- /wp:group -->\n<!-- wp:group {\"className\":\"fn-shell fn-journal-grid\"} -->\n<div class=\"wp-block-group fn-shell fn-journal-grid\"><!-- wp:query {\"queryId\":0,\"query\":{\"perPage\":6,\"pages\":0,\"offset\":0,\"postType\":\"post\",\"order\":\"desc\",\"orderBy\":\"date\",\"author\":\"\",\"search\":\"\",\"exclude\":[],\"sticky\":\"\",\"inherit\":true},\"className\":\"fn-stories fn-stories--list\"} -->\n<div class=\"wp-block-query fn-stories fn-stories--list\"><!-- wp:post-template {\"layout\":{\"type\":\"grid\",\"columnCount\":1}} -->\n<!-- wp:post-featured-image {\"isLink\":true,\"className\":\"fn-card-image\"} /-->\n<!-- wp:post-terms {\"term\":\"category\",\"className\":\"fn-card-category\"} /-->\n<!-- wp:post-title {\"level\":2,\"isLink\":true,\"className\":\"fn-card-title\"} /-->\n<!-- wp:post-excerpt {\"moreText\":\"\",\"excerptLength\":24,\"showMoreOnNewLine\":false,\"className\":\"fn-card-excerpt\"} /-->\n<!-- wp:post-date {\"format\":\"F j, Y\",\"className\":\"fn-card-date\"} /-->\n\n<!-- /wp:post-template -->\n<!-- wp:query-pagination {\"layout\":{\"type\":\"flex\",\"justifyContent\":\"center\"}} -->\n<!-- wp:query-pagination-previous /-->\n<!-- wp:query-pagination-numbers /-->\n<!-- wp:query-pagination-next /-->\n\n<!-- /wp:query-pagination -->\n</div>\n<!-- /wp:query -->\n</div>\n<!-- /wp:group -->\n</main>\n<!-- /wp:group -->\n<!-- wp:template-part {\"slug\":\"field-notes-footer\",\"theme\":\"twentytwentyfive\",\"tagName\":\"footer\"} /-->\n",
+      "post_title": "Reprint Field Notes index",
+      "post_excerpt": "",
+      "post_status": "publish",
+      "comment_status": "closed",
+      "ping_status": "closed",
+      "post_name": "index",
+      "post_modified": "2026-11-01 20:36:59",
+      "post_modified_gmt": "2026-11-01 20:36:59",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/index/",
+      "menu_order": 0,
+      "post_type": "wp_template",
+      "post_mime_type": "",
+      "comment_count": 0
+    },
+    {
+      "ID": 27,
+      "post_date": "2026-11-01 20:36:59",
+      "post_date_gmt": "2026-11-01 20:36:59",
+      "post_content": "<!-- wp:template-part {\"slug\":\"field-notes-header\",\"theme\":\"twentytwentyfive\",\"tagName\":\"header\"} /-->\n<!-- wp:group {\"className\":\"fn-main\",\"tagName\":\"main\"} -->\n<main class=\"wp-block-group fn-main\"><!-- wp:group {\"className\":\"fn-shell fn-article\"} -->\n<div class=\"wp-block-group fn-shell fn-article\"><!-- wp:paragraph {\"className\":\"fn-back-link\"} -->\n<p class=\"fn-back-link\"><a href=\"{{site_url}}/journal/\">← Journal</a></p>\n<!-- /wp:paragraph -->\n<!-- wp:group {\"className\":\"fn-article-head\"} -->\n<div class=\"wp-block-group fn-article-head\"><!-- wp:post-terms {\"term\":\"category\",\"className\":\"fn-article-category\"} /-->\n<!-- wp:post-title {\"level\":1,\"className\":\"fn-article-title\"} /-->\n<!-- wp:post-excerpt {\"showMoreOnNewLine\":false,\"moreText\":\"\",\"className\":\"fn-article-deck\"} /-->\n<!-- wp:group {\"className\":\"fn-article-byline\",\"layout\":{\"type\":\"flex\",\"justifyContent\":\"center\"}} -->\n<div class=\"wp-block-group fn-article-byline\"><!-- wp:post-date {\"format\":\"F j, Y\",\"className\":\"fn-article-date\"} /-->\n<!-- wp:paragraph {\"className\":\"fn-article-source\"} -->\n<p class=\"fn-article-source\">Reprint Field Notes</p>\n<!-- /wp:paragraph -->\n</div>\n<!-- /wp:group -->\n</div>\n<!-- /wp:group -->\n<!-- wp:post-featured-image {\"className\":\"fn-article-image\"} /-->\n<!-- wp:group {\"className\":\"fn-article-copy\"} -->\n<div class=\"wp-block-group fn-article-copy\"><!-- wp:post-content {\"layout\":{\"type\":\"constrained\"}} /-->\n</div>\n<!-- /wp:group -->\n<!-- wp:group {\"className\":\"fn-story-navigation\",\"layout\":{\"type\":\"flex\",\"justifyContent\":\"space-between\"}} -->\n<div class=\"wp-block-group fn-story-navigation\"><!-- wp:post-navigation-link {\"type\":\"previous\",\"label\":\"← Previous story\",\"showTitle\":false} /-->\n<!-- wp:post-navigation-link {\"type\":\"next\",\"label\":\"Next story →\",\"showTitle\":false} /-->\n</div>\n<!-- /wp:group -->\n</div>\n<!-- /wp:group -->\n</main>\n<!-- /wp:group -->\n<!-- wp:template-part {\"slug\":\"field-notes-footer\",\"theme\":\"twentytwentyfive\",\"tagName\":\"footer\"} /-->\n",
+      "post_title": "Reprint Field Notes story",
+      "post_excerpt": "",
+      "post_status": "publish",
+      "comment_status": "closed",
+      "ping_status": "closed",
+      "post_name": "single",
+      "post_modified": "2026-11-01 20:36:59",
+      "post_modified_gmt": "2026-11-01 20:36:59",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/single/",
+      "menu_order": 0,
+      "post_type": "wp_template",
+      "post_mime_type": "",
+      "comment_count": 0
+    },
+    {
+      "ID": 28,
+      "post_date": "2026-11-01 20:36:59",
+      "post_date_gmt": "2026-11-01 20:36:59",
+      "post_content": "<!-- wp:template-part {\"slug\":\"field-notes-header\",\"theme\":\"twentytwentyfive\",\"tagName\":\"header\"} /-->\n<!-- wp:group {\"className\":\"fn-main\",\"tagName\":\"main\"} -->\n<main class=\"wp-block-group fn-main\"><!-- wp:group {\"className\":\"fn-shell fn-page-heading fn-not-found\"} -->\n<div class=\"wp-block-group fn-shell fn-page-heading fn-not-found\"><!-- wp:heading {\"level\":1,\"className\":\"fn-page-title\"} -->\n<h1 class=\"wp-block-heading fn-page-title\">This path<br><em>ends here.</em></h1>\n<!-- /wp:heading -->\n<!-- wp:paragraph {\"className\":\"fn-page-intro\"} -->\n<p class=\"fn-page-intro\">We couldn’t find that page. There are still a few good stories waiting for you.</p>\n<!-- /wp:paragraph -->\n<!-- wp:buttons -->\n<div class=\"wp-block-buttons\"><!-- wp:button -->\n<div class=\"wp-block-button\"><a class=\"wp-block-button__link wp-element-button\" href=\"{{site_url}}/journal/\">Back to the journal</a></div>\n<!-- /wp:button -->\n</div>\n<!-- /wp:buttons -->\n</div>\n<!-- /wp:group -->\n</main>\n<!-- /wp:group -->\n<!-- wp:template-part {\"slug\":\"field-notes-footer\",\"theme\":\"twentytwentyfive\",\"tagName\":\"footer\"} /-->\n",
+      "post_title": "Reprint Field Notes not found",
+      "post_excerpt": "",
+      "post_status": "publish",
+      "comment_status": "closed",
+      "ping_status": "closed",
+      "post_name": "404",
+      "post_modified": "2026-11-01 20:36:59",
+      "post_modified_gmt": "2026-11-01 20:36:59",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/404/",
+      "menu_order": 0,
+      "post_type": "wp_template",
+      "post_mime_type": "",
+      "comment_count": 0
+    },
+    {
+      "ID": 29,
+      "post_date": "2026-11-01 20:36:59",
+      "post_date_gmt": "2026-11-01 20:36:59",
+      "post_content": "{\"version\":3,\"isGlobalStylesUserThemeJSON\":true,\"settings\":{\"layout\":{\"contentSize\":\"720px\",\"wideSize\":\"1280px\"},\"color\":{\"palette\":[{\"slug\":\"base\",\"name\":\"Paper\",\"color\":\"#f7f5ed\"},{\"slug\":\"contrast\",\"name\":\"Forest\",\"color\":\"#243e33\"},{\"slug\":\"accent-1\",\"name\":\"Moss\",\"color\":\"#e4e8dc\"},{\"slug\":\"accent-2\",\"name\":\"Clay\",\"color\":\"#a95534\"},{\"slug\":\"accent-3\",\"name\":\"Deep forest\",\"color\":\"#1c3028\"},{\"slug\":\"accent-4\",\"name\":\"Stone\",\"color\":\"#565d52\"},{\"slug\":\"accent-5\",\"name\":\"White\",\"color\":\"#ffffff\"}]},\"typography\":{\"fontFamilies\":[{\"name\":\"Manrope\",\"slug\":\"manrope\",\"fontFamily\":\"Manrope, sans-serif\",\"fontFace\":[{\"src\":[\"{{site_url}}\\/wp-content\\/themes\\/twentytwentyfive\\/assets\\/fonts\\/manrope\\/Manrope-VariableFont_wght.woff2\"],\"fontWeight\":\"200 800\",\"fontStyle\":\"normal\",\"fontFamily\":\"Manrope\"}]},{\"name\":\"Fira Code\",\"slug\":\"fira-code\",\"fontFamily\":\"\\\"Fira Code\\\", monospace\",\"fontFace\":[{\"src\":[\"{{site_url}}\\/wp-content\\/themes\\/twentytwentyfive\\/assets\\/fonts\\/fira-code\\/FiraCode-VariableFont_wght.woff2\"],\"fontWeight\":\"300 700\",\"fontStyle\":\"normal\",\"fontFamily\":\"\\\"Fira Code\\\"\"}]},{\"name\":\"Vollkorn\",\"slug\":\"vollkorn\",\"fontFamily\":\"Vollkorn, Georgia, serif\",\"fontFace\":[{\"fontFamily\":\"Vollkorn\",\"fontWeight\":\"400 900\",\"fontStyle\":\"normal\",\"src\":[\"{{site_url}}\\/wp-content\\/themes\\/twentytwentyfive\\/assets\\/fonts\\/vollkorn\\/Vollkorn-VariableFont_wght.woff2\"]},{\"fontFamily\":\"Vollkorn\",\"fontWeight\":\"400 900\",\"fontStyle\":\"italic\",\"src\":[\"{{site_url}}\\/wp-content\\/themes\\/twentytwentyfive\\/assets\\/fonts\\/vollkorn\\/Vollkorn-Italic-VariableFont_wght.woff2\"]}]}]}},\"styles\":{\"color\":{\"background\":\"#f7f5ed\",\"text\":\"#243e33\"},\"typography\":{\"fontFamily\":\"var:preset|font-family|manrope\",\"fontSize\":\"17px\",\"fontWeight\":\"400\",\"lineHeight\":\"1.7\"},\"spacing\":{\"blockGap\":\"1.5rem\",\"padding\":{\"top\":\"0\",\"right\":\"0\",\"bottom\":\"0\",\"left\":\"0\"}},\"elements\":{\"heading\":{\"typography\":{\"fontFamily\":\"var:preset|font-family|vollkorn\",\"fontWeight\":\"400\",\"lineHeight\":\"1.08\",\"letterSpacing\":\"-0.035em\"}},\"link\":{\"color\":{\"text\":\"#243e33\"},\"typography\":{\"textDecoration\":\"none\"},\":hover\":{\"typography\":{\"textDecoration\":\"underline\"}}},\"button\":{\"color\":{\"background\":\"#243e33\",\"text\":\"#f7f5ed\"},\"border\":{\"radius\":\"0\"},\"typography\":{\"fontFamily\":\"var:preset|font-family|manrope\",\"fontSize\":\"16px\",\"fontWeight\":\"600\",\"lineHeight\":\"1.3\"},\"spacing\":{\"padding\":{\"top\":\"16px\",\"right\":\"30px\",\"bottom\":\"16px\",\"left\":\"30px\"}}}},\"css\":\":root {\\n  --fn-paper: #f7f5ed;\\n  --fn-moss: #e4e8dc;\\n  --fn-forest: #243e33;\\n  --fn-deep: #1c3028;\\n  --fn-stone: #565d52;\\n  --fn-clay: #a95534;\\n  --fn-clay-light: #e3a07f;\\n  --fn-mist: #c9d2c4;\\n  --fn-line: #243e332e;\\n  --fn-serif: var(--wp--preset--font-family--vollkorn);\\n  --fn-mono: var(--wp--preset--font-family--fira-code);\\n  --fn-gutter: 56px;\\n  --fn-shell: min(1280px, calc(100vw - 2 * var(--fn-gutter)));\\n}\\n\\/* The footer script adds fn-smooth after load, so arriving at \\/#copy jumps and clicks on the page glide *\\/\\nhtml.fn-smooth { scroll-behavior: smooth; }\\nbody { -webkit-font-smoothing: antialiased; overflow-x: clip; }\\nbody .wp-site-blocks { padding: 0; }\\n.wp-site-blocks > * { margin-block-start: 0; }\\n.fn-shell { width: var(--fn-shell); max-width: 1280px; margin-inline: auto; }\\n.fn-main { margin-block: 0; }\\n.fn-main > .wp-block-post-content, .fn-main > .wp-block-post-content > * { margin-block: 0; }\\na { text-underline-offset: .2em; text-decoration-thickness: 1px; }\\na:focus-visible, button:focus-visible { outline: 2px solid var(--fn-clay); outline-offset: 4px; }\\nh1 em, h2 em { color: var(--fn-clay); }\\n\\n\\/* Header *\\/\\n.fn-header { min-height: 92px; gap: 32px; border-bottom: 1px solid var(--fn-line); }\\n.fn-brand { gap: 10px; align-items: center; }\\n.fn-mark { margin: 0; color: var(--fn-clay); font: 400 34px\\/1 Georgia, serif; }\\n.fn-wordmark { margin: 0; font-family: var(--fn-serif); font-size: 32px; font-weight: 600; letter-spacing: -.045em; line-height: 1; white-space: nowrap; }\\n.fn-wordmark a:hover { text-decoration: none; }\\n.fn-nav { font-size: 15px; font-weight: 600; }\\n.fn-nav .wp-block-navigation__container { gap: 36px; }\\n.fn-nav .wp-block-navigation-item:last-child a { border: 1.5px solid var(--fn-forest); padding: 10px 20px; }\\n.fn-nav .wp-block-navigation-item:last-child a:hover { background: var(--fn-forest); color: var(--fn-paper); text-decoration: none; }\\n\\n\\/* Shared pieces *\\/\\n.wp-block-button__link:hover { background: var(--fn-deep); }\\n.fn-text-link { margin: 0; font-size: 15px; font-weight: 600; }\\n.fn-text-link a { border-bottom: 1.5px solid currentColor; padding-bottom: 3px; }\\n.fn-text-link a::after { content: \\\" \\u2192\\\"; }\\n.fn-text-link a:hover { text-decoration: none; color: var(--fn-clay); }\\n\\n\\/* Home: the headline and the way to copy on the left, one story's photograph on the right, out to the window's edge *\\/\\n.fn-hero { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 64px; align-items: center; padding: 40px 0 120px; }\\n.fn-hero > *, .fn-hero-copy > * { margin: 0; }\\n.fn-hero-title { font-size: clamp(64px, 8.4vw, 132px); line-height: .92; letter-spacing: -.045em; }\\n.fn-hero-title em { font-style: italic; }\\n.fn-hero-copy .fn-hero-description { margin-top: 36px; max-width: 30em; font-size: 20px; line-height: 1.6; color: var(--fn-stone); }\\n.fn-hero-copy .fn-actions { margin-top: 40px; gap: 14px 24px; }\\n.fn-actions > * { margin: 0; }\\n.fn-or-link { font-size: 16px; color: var(--fn-stone); }\\n.fn-or-link a { font-weight: 600; color: var(--fn-forest); text-decoration: underline; }\\n.fn-or-link a:hover { color: var(--fn-clay); }\\n.fn-hero-image.wp-block-image { position: relative; margin-right: calc((var(--fn-shell) - 100vw) \\/ 2); }\\n.fn-hero-image.wp-block-image a { display: block; }\\n.fn-hero-image.wp-block-image img { display: block; width: 100%; height: clamp(520px, calc(100vh - 172px), 820px); object-fit: cover; object-position: 50% 40%; }\\n.fn-hero-image .wp-element-caption { position: absolute; left: 0; bottom: 0; margin: 0; padding: 16px 22px; max-width: calc(100% - 48px); background: var(--fn-paper); color: var(--fn-stone); font-size: 15px; line-height: 1.4; text-align: left; }\\n.fn-hero-image .wp-element-caption a { display: block; margin-top: 2px; font-family: var(--fn-serif); font-size: 22px; letter-spacing: -.02em; color: var(--fn-forest); }\\n\\n\\/* Story cards *\\/\\n.fn-front { padding-bottom: 128px; }\\n.fn-section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; margin: 0 0 48px; padding-top: 28px; border-top: 1.5px solid var(--fn-forest); }\\n.fn-section-heading > * { margin: 0; }\\n.fn-section-title { font-size: clamp(40px, 4vw, 56px); line-height: 1; }\\n.fn-stories, .fn-stories .wp-block-post-template { margin: 0; }\\n.fn-stories .wp-block-post > * { margin: 0; }\\n.fn-stories .fn-card-image { margin-bottom: 22px; overflow: hidden; }\\n.fn-card-image img { display: block; width: 100%; height: auto; aspect-ratio: 3 \\/ 2; object-fit: cover; transition: transform .4s ease; }\\n.fn-card-image a:hover img { transform: scale(1.03); }\\n.fn-stories .fn-card-category, .fn-article-category { font: 500 13px\\/1.4 var(--fn-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--fn-clay); }\\n.fn-stories .fn-card-category { margin-bottom: 10px; }\\n.fn-card-category a, .fn-article-category a { color: inherit; }\\n.fn-card-title { font-size: 30px; line-height: 1.1; letter-spacing: -.03em; }\\n.fn-card-title a:hover { text-decoration: underline; }\\n.fn-stories .fn-card-excerpt { margin-top: 12px; font-size: 16px; line-height: 1.6; color: var(--fn-stone); }\\n.fn-card-excerpt p { margin: 0; }\\n.fn-stories .fn-card-date { margin-top: 14px; font: 400 13px\\/1.4 var(--fn-mono); color: var(--fn-stone); }\\n\\/* Home: two stories, then three *\\/\\n.fn-stories--front .wp-block-post-template.is-layout-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 72px 32px; }\\n.fn-stories--front .wp-block-post { grid-column: span 2; }\\n.fn-stories--front .wp-block-post:nth-child(-n+2) { grid-column: span 3; }\\n.fn-stories--front .wp-block-post:nth-child(-n+2) .fn-card-title { font-size: clamp(32px, 3vw, 42px); }\\n\\/* Journal: one story per row, photograph left, words right *\\/\\n.fn-stories--list .wp-block-post-template.is-layout-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }\\n.fn-stories--list .wp-block-post { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); grid-template-rows: 1fr repeat(4, auto) 1fr; column-gap: 56px; padding: 48px 0; border-top: 1px solid var(--fn-line); }\\n.fn-stories--list .wp-block-post:first-child { border-top: 1.5px solid var(--fn-forest); }\\n.fn-stories--list .wp-block-post > * { grid-column: 2; }\\n.fn-stories--list .fn-card-image { grid-column: 1; grid-row: 1 \\/ -1; margin: 0; }\\n.fn-stories--list .fn-card-category { grid-row: 2; }\\n.fn-stories--list .fn-card-title { grid-row: 3; font-size: clamp(34px, 3.4vw, 48px); }\\n.fn-stories--list .fn-card-excerpt { grid-row: 4; font-size: 18px; }\\n.fn-stories--list .fn-card-date { grid-row: 5; }\\n\\n\\/* Home: the journal's idea, full width *\\/\\n.fn-band { background: var(--fn-moss); padding: 120px var(--fn-gutter); text-align: center; }\\n.fn-band > * { margin: 0 auto; }\\n.fn-band-title { font-size: clamp(48px, 5.8vw, 88px); line-height: .96; letter-spacing: -.04em; }\\n.fn-band .fn-band-text { max-width: 32em; margin-top: 32px; font-size: 19px; line-height: 1.65; color: var(--fn-stone); }\\n.fn-band .fn-text-link { margin-top: 36px; }\\n\\n\\/* Footer *\\/\\n.fn-footer { margin: 0; padding: 104px 0 32px; background: var(--fn-deep); color: var(--fn-paper); }\\n.fn-footer > .fn-shell { container-type: inline-size; }\\n.fn-footer a { color: var(--fn-paper); }\\n.fn-footer-top { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); align-items: end; gap: 40px 64px; }\\n.fn-footer-top > *, .fn-footer-intro > * { margin: 0; }\\n.fn-footer-title { font-size: clamp(48px, 5.4vw, 80px); line-height: .96; letter-spacing: -.04em; color: var(--fn-paper); }\\n.fn-footer-title em { color: var(--fn-clay-light); }\\n.fn-footer-intro > p { max-width: 26em; font-size: 17px; line-height: 1.65; color: var(--fn-mist); }\\n.fn-footer-intro .wp-block-buttons { margin-top: 28px; }\\n.fn-light-button .wp-block-button__link { background: var(--fn-paper); color: var(--fn-forest); }\\n.fn-light-button .wp-block-button__link:hover { background: var(--fn-moss); }\\n\\/* The journal's name, set as wide as the page, like the nameplate on a printed issue *\\/\\n.fn-footer .fn-nameplate { margin: 112px 0 0; font: 400 13.4cqi\\/.78 var(--fn-serif); letter-spacing: -.055em; white-space: nowrap; color: var(--fn-paper); }\\n.fn-footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; margin-top: 40px; padding-top: 24px; border-top: 1px solid #f7f5ed33; }\\n.fn-footer-bottom > * { margin: 0; }\\n.fn-footer-links { display: flex; gap: 28px; font-size: 15px; font-weight: 600; }\\n.fn-footer-credit { font-size: 15px; color: var(--fn-mist); }\\n.fn-footer-credit a { color: var(--fn-mist); text-decoration: underline; }\\n\\n\\/* Page headings *\\/\\n.fn-page-heading { padding: 88px 0 72px; }\\n.fn-page-heading > * { margin: 0; }\\n.fn-page-title { font-size: clamp(56px, 7.2vw, 112px); line-height: .94; letter-spacing: -.045em; }\\n.fn-page-title em { font-style: italic; }\\n.fn-page-heading .fn-page-intro { max-width: 32em; margin-top: 28px; font-size: 20px; line-height: 1.6; color: var(--fn-stone); }\\n.fn-page-heading .wp-block-buttons { margin-top: 36px; }\\n.fn-journal-grid { padding-bottom: 120px; }\\n.fn-journal-grid .wp-block-query-pagination { margin-top: 40px; }\\n.fn-not-found { min-height: 520px; }\\n\\n\\/* Copy this site, on the homepage and its own page: the commands on the left, the browser on the right *\\/\\n.fn-copy { padding-bottom: 128px; scroll-margin-top: 32px; }\\n.fn-reprint-page { padding-bottom: 128px; }\\n.fn-try { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 32px; align-items: start; }\\n.fn-try > *, .fn-choice > * { margin: 0; }\\n.fn-choice-title { font-size: 34px; line-height: 1.1; }\\n.fn-choice .fn-choice-need { margin-top: 8px; font-size: 17px; color: var(--fn-stone); }\\n.fn-choice .fn-terminal { margin-top: 24px; }\\n.fn-choice { padding: 32px; background: var(--fn-moss); }\\n.fn-choice .wp-block-buttons { margin-top: 24px; }\\n.fn-choice .fn-pending { margin-top: 18px; padding-left: 16px; border-left: 3px solid var(--fn-clay); font-size: 16px; line-height: 1.6; color: var(--fn-stone); }\\n.fn-terminal { background: var(--fn-deep); color: var(--fn-paper); padding-bottom: 24px; }\\n.fn-terminal > * { margin: 0; }\\n.fn-terminal .fn-terminal-bar { padding: 12px 24px; background: #2b4a3d; font-size: 13px; font-weight: 600; line-height: 1.2; color: var(--fn-mist); }\\n.fn-terminal .fn-terminal-say { padding: 22px 24px 4px; font-size: 14px; font-weight: 500; color: var(--fn-mist); }\\n\\/* A drag across the commands selects and copies only the commands *\\/\\n.fn-terminal .fn-terminal-bar, .fn-terminal .fn-terminal-say { -webkit-user-select: none; user-select: none; }\\n.fn-terminal .fn-cli-command { margin: 0; padding: 0 24px; overflow-x: auto; border: 0; border-radius: 0; background: none; color: var(--fn-paper); font: 400 14px\\/1.75 var(--fn-mono); }\\n.fn-terminal .fn-cli-command code { white-space: pre; font: inherit; }\\n\\n\\/* About *\\/\\n.fn-about-page { padding-bottom: 128px; }\\n.fn-about-page-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); align-items: center; gap: 72px; margin: 0 0 120px; }\\n.fn-about-page-grid > *, .fn-about-page-copy > * { margin: 0; }\\n.fn-about-page-image img { display: block; width: 100%; height: 560px; object-fit: cover; }\\n.fn-about-page-copy h2 { font-size: clamp(36px, 3.4vw, 48px); line-height: 1.02; }\\n.fn-about-page-copy p { margin-top: 20px; font-size: 18px; line-height: 1.7; color: var(--fn-stone); }\\n.fn-photo-credits { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); grid-template-rows: auto 1fr; gap: 0 72px; padding-top: 28px; border-top: 1.5px solid var(--fn-forest); }\\n.fn-photo-credits > * { margin: 0; grid-column: 1; }\\n.fn-photo-credits h2 { font-size: clamp(36px, 3.4vw, 48px); line-height: 1.02; }\\n.fn-photo-credits > p { margin-top: 20px; font-size: 17px; line-height: 1.7; color: var(--fn-stone); }\\n.fn-photo-credits a { text-decoration: underline; }\\n.fn-photo-credits ul { grid-column: 2; grid-row: 1 \\/ span 2; margin: 0; padding: 0; list-style: none; }\\n.fn-photo-credits li { padding: 16px 0; border-bottom: 1px solid var(--fn-line); font-size: 17px; }\\n.fn-photo-credits li:first-child { padding-top: 4px; }\\n\\n\\/* Story *\\/\\n.fn-article { padding: 28px 0 120px; }\\n.fn-article > * { margin: 0; }\\n.fn-back-link { font-size: 15px; font-weight: 600; }\\n.fn-back-link a:hover { color: var(--fn-clay); text-decoration: none; }\\n.fn-article .fn-article-head { max-width: 960px; margin: 48px auto 64px; text-align: center; }\\n.fn-article-head > * { margin: 0; }\\n.fn-article-head .fn-article-title { margin-top: 20px; font-size: clamp(52px, 6.6vw, 100px); line-height: .96; letter-spacing: -.045em; }\\n.fn-article-head .fn-article-deck { max-width: 34em; margin: 28px auto 0; font-size: 21px; line-height: 1.55; color: var(--fn-stone); }\\n.fn-article-deck p { margin: 0; }\\n.fn-article-head .fn-article-byline { margin-top: 28px; gap: 16px; }\\n.fn-article-byline > * { margin: 0; font: 400 13px\\/1.4 var(--fn-mono); color: var(--fn-stone); }\\n.fn-article-byline > * + *::before { content: \\\"\\u00b7\\\"; margin-right: 16px; }\\n.fn-article-image img { display: block; width: 100%; height: auto; aspect-ratio: 2 \\/ 1; object-fit: cover; }\\n.fn-article .fn-article-copy { max-width: 680px; margin: 80px auto 0; }\\n.fn-article-copy p { font-family: var(--fn-serif); font-size: 20px; line-height: 1.7; }\\n.fn-article-copy .fn-lede { font-size: 24px; line-height: 1.6; }\\n.fn-article-copy .has-drop-cap:not(:focus)::first-letter { margin: .08em .12em 0 0; font-size: 3.6em; font-weight: 500; line-height: .8; color: var(--fn-clay); }\\n.fn-article-copy h2 { margin-top: 64px; font-size: 36px; line-height: 1.1; }\\n.fn-article-copy .fn-quote { margin: 56px 0; padding: 4px 0 4px 28px; border-left: 3px solid var(--fn-clay); }\\n.fn-article-copy .fn-quote p { font-style: italic; font-size: 32px; line-height: 1.35; letter-spacing: -.015em; margin: 0; }\\n.fn-article-copy .fn-try-note { margin-top: 64px; padding: 32px 36px; background: var(--fn-moss); }\\n.fn-try-note > * { margin: 0; }\\n.fn-article-copy .fn-try-note h2 { margin: 0 0 12px; font-size: 28px; }\\n.fn-article-copy .fn-photo-credit { margin-top: 48px; font-family: inherit; font-size: 15px; color: var(--fn-stone); }\\n.fn-article-copy .fn-photo-credit a { text-decoration: underline; }\\n.fn-article-copy .wp-block-gallery.has-nested-images figure.wp-block-image { flex-direction: column; }\\n.fn-article-copy .wp-block-gallery.has-nested-images figure.wp-block-image img { height: auto; aspect-ratio: 4 \\/ 3; }\\n.fn-article-copy .wp-block-gallery.has-nested-images figure.wp-block-image figcaption { position: static; padding: 10px 0 0; max-height: none; background: none; color: var(--fn-stone); font-size: 14px; text-align: left; }\\n.fn-story-navigation { margin-top: 80px; padding-top: 28px; border-top: 1px solid var(--fn-line); font-size: 16px; font-weight: 600; }\\n.fn-story-navigation > * { max-width: 45%; }\\n\\n\\/* Below this width the long pull command no longer fits beside the browser card *\\/\\n@media (max-width: 1260px) {\\n  .fn-try { grid-template-columns: minmax(0, 1fr); gap: 24px; }\\n}\\n@media (max-width: 1000px) {\\n  :root { --fn-gutter: 32px; }\\n  .fn-hero { gap: 40px; }\\n  .fn-stories--list .wp-block-post { column-gap: 36px; }\\n  .fn-about-page-grid { gap: 48px; }\\n}\\n@media (max-width: 900px) {\\n  .fn-hero { grid-template-columns: minmax(0, 1fr); padding-top: 32px; }\\n  .fn-hero-image.wp-block-image { margin-inline: calc(-1 * var(--fn-gutter)); }\\n  .fn-hero-image.wp-block-image img { height: auto; aspect-ratio: 4 \\/ 5; }\\n  .fn-footer-top, .fn-about-page-grid { grid-template-columns: minmax(0, 1fr); }\\n  .fn-about-page-image img { height: auto; aspect-ratio: 3 \\/ 2; }\\n}\\n@media (max-width: 760px) {\\n  .fn-stories--front .wp-block-post-template.is-layout-grid { grid-template-columns: minmax(0, 1fr); gap: 56px; }\\n  .fn-stories--front .wp-block-post, .fn-stories--front .wp-block-post:nth-child(-n+2) { grid-column: auto; }\\n  .fn-stories--list .wp-block-post { display: block; padding: 40px 0; }\\n  .fn-stories--list .fn-card-image { margin-bottom: 22px; }\\n  .fn-photo-credits { display: block; }\\n  .fn-photo-credits ul { margin-top: 28px; }\\n  \\/* Below about 745px the name and the three links no longer fit on one row, so the menu folds into its button *\\/\\n  .fn-nav .wp-block-navigation__responsive-container:not(.is-menu-open) { display: none; }\\n  .fn-nav .wp-block-navigation__responsive-container-open { display: flex; padding: 10px; margin-right: -10px; }\\n  .fn-nav .wp-block-navigation__responsive-container-close { padding: 10px; }\\n  .fn-nav .wp-block-navigation__responsive-container.is-menu-open { background: var(--fn-paper); color: var(--fn-forest); padding: 28px; }\\n  .fn-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container { gap: 28px; font-size: 22px; }\\n  .fn-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item:last-child a { padding: 12px 20px; }\\n}\\n@media (max-width: 700px) {\\n  :root { --fn-gutter: 20px; }\\n  .fn-header { min-height: 76px; }\\n  \\/* Keeps the name on one line beside the menu button down to 340px *\\/\\n  .fn-wordmark { font-size: clamp(22px, 6.6vw, 28px); }\\n  .fn-mark { font-size: 30px; }\\n  .fn-hero { gap: 36px; padding: 28px 0 80px; }\\n  .fn-hero-title { font-size: clamp(52px, 15vw, 72px); }\\n  .fn-hero-copy .fn-hero-description { margin-top: 24px; font-size: 18px; }\\n  .fn-hero-copy .fn-actions { margin-top: 28px; }\\n  .fn-hero-image .wp-element-caption { padding: 14px 20px; }\\n  .fn-hero-image .wp-element-caption a { font-size: 20px; }\\n  .fn-front { padding-bottom: 88px; }\\n  .fn-section-heading { display: block; margin-bottom: 36px; }\\n  .fn-section-heading .fn-text-link { margin-top: 16px; }\\n  .fn-stories--front .wp-block-post:nth-child(-n+2) .fn-card-title, .fn-card-title, .fn-stories--list .fn-card-title { font-size: 32px; }\\n  .fn-stories--list .fn-card-excerpt { font-size: 16px; }\\n  .fn-band { padding-block: 80px; }\\n  .fn-band .fn-band-text { font-size: 17px; }\\n  .fn-footer { padding-top: 72px; }\\n  .fn-footer .fn-nameplate { margin-top: 72px; }\\n  .fn-footer-bottom { flex-direction: column; }\\n  .fn-page-heading { padding: 48px 0 44px; }\\n  .fn-page-heading .fn-page-intro { margin-top: 20px; font-size: 18px; }\\n  .fn-copy, .fn-journal-grid, .fn-reprint-page, .fn-about-page { padding-bottom: 80px; }\\n  .fn-choice-title { font-size: 30px; }\\n  .fn-choice { padding: 24px 20px; }\\n  .fn-terminal .fn-cli-command { font-size: 13px; padding-inline: 20px; }\\n  .fn-terminal .fn-terminal-bar, .fn-terminal .fn-terminal-say { padding-inline: 20px; }\\n  .fn-about-page-grid { margin-bottom: 72px; }\\n  .fn-article .fn-article-head { margin: 32px auto 40px; }\\n  .fn-article-head .fn-article-deck { font-size: 18px; }\\n  .fn-article-image img { aspect-ratio: 4 \\/ 3; }\\n  .fn-article .fn-article-copy { margin-top: 48px; }\\n  .fn-article-copy p { font-size: 19px; }\\n  .fn-article-copy .fn-lede { font-size: 21px; }\\n  .fn-article-copy h2 { font-size: 30px; margin-top: 48px; }\\n  .fn-article-copy .fn-quote p { font-size: 26px; }\\n  .fn-article-copy .fn-try-note { padding: 24px; }\\n}\\n@media (prefers-reduced-motion: reduce) {\\n  html.fn-smooth { scroll-behavior: auto; }\\n  .fn-card-image img { transition: none; }\\n}\\n\"}}",
+      "post_title": "Reprint Field Notes styles",
+      "post_excerpt": "",
+      "post_status": "publish",
+      "comment_status": "closed",
+      "ping_status": "closed",
+      "post_name": "wp-global-styles-twentytwentyfive",
+      "post_modified": "2026-11-01 20:36:59",
+      "post_modified_gmt": "2026-11-01 20:36:59",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/wp-global-styles-twentytwentyfive/",
+      "menu_order": 0,
+      "post_type": "wp_global_styles",
+      "post_mime_type": "",
+      "comment_count": 0
+    },
+    {
+      "ID": 52,
+      "post_date": "2026-10-31 21:19:58",
+      "post_date_gmt": "2026-10-31 21:19:58",
+      "post_content": "<!-- wp:page-list /-->",
+      "post_title": "Navigation",
+      "post_excerpt": "",
+      "post_status": "publish",
+      "comment_status": "closed",
+      "ping_status": "closed",
+      "post_name": "navigation",
+      "post_modified": "2026-10-31 21:19:58",
+      "post_modified_gmt": "2026-10-31 21:19:58",
+      "post_parent": 0,
+      "guid": "https://reprint-demo.wordpress.net/navigation/",
+      "menu_order": 0,
+      "post_type": "wp_navigation",
+      "post_mime_type": "",
+      "comment_count": 0
+    }
+  ],
+  "postmeta": [
+    {
+      "meta_id": 3,
+      "post_id": 4,
+      "meta_key": "_wp_attached_file",
+      "meta_value": "2026/10/field-notes-lake.webp"
+    },
+    {
+      "meta_id": 4,
+      "post_id": 4,
+      "meta_key": "_wp_attachment_metadata",
+      "meta_value": "a:6:{s:5:\"width\";i:1920;s:6:\"height\";i:1280;s:4:\"file\";s:29:\"2026/10/field-notes-lake.webp\";s:8:\"filesize\";i:135826;s:5:\"sizes\";a:5:{s:6:\"medium\";a:5:{s:4:\"file\";s:29:\"field-notes-lake-300x200.webp\";s:5:\"width\";i:300;s:6:\"height\";i:200;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:10462;}s:5:\"large\";a:5:{s:4:\"file\";s:30:\"field-notes-lake-1024x683.webp\";s:5:\"width\";i:1024;s:6:\"height\";i:683;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:60806;}s:9:\"thumbnail\";a:5:{s:4:\"file\";s:29:\"field-notes-lake-150x150.webp\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:4964;}s:12:\"medium_large\";a:5:{s:4:\"file\";s:29:\"field-notes-lake-768x512.webp\";s:5:\"width\";i:768;s:6:\"height\";i:512;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:40124;}s:9:\"1536x1536\";a:5:{s:4:\"file\";s:31:\"field-notes-lake-1536x1024.webp\";s:5:\"width\";i:1536;s:6:\"height\";i:1024;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:102406;}}s:10:\"image_meta\";a:13:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}s:3:\"alt\";s:0:\"\";}}"
+    },
+    {
+      "meta_id": 6,
+      "post_id": 4,
+      "meta_key": "_wp_attachment_image_alt",
+      "meta_value": "Clouds reflected in a still lake beneath wooded hills."
+    },
+    {
+      "meta_id": 7,
+      "post_id": 4,
+      "meta_key": "_field_notes_photo_source",
+      "meta_value": "https://wordpress.org/photos/photo/9436a22d4f/"
+    },
+    {
+      "meta_id": 8,
+      "post_id": 5,
+      "meta_key": "_wp_attached_file",
+      "meta_value": "2026/10/field-notes-forest.webp"
+    },
+    {
+      "meta_id": 9,
+      "post_id": 5,
+      "meta_key": "_wp_attachment_metadata",
+      "meta_value": "a:6:{s:5:\"width\";i:1920;s:6:\"height\";i:1280;s:4:\"file\";s:31:\"2026/10/field-notes-forest.webp\";s:8:\"filesize\";i:752452;s:5:\"sizes\";a:5:{s:6:\"medium\";a:5:{s:4:\"file\";s:31:\"field-notes-forest-300x200.webp\";s:5:\"width\";i:300;s:6:\"height\";i:200;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:29708;}s:5:\"large\";a:5:{s:4:\"file\";s:32:\"field-notes-forest-1024x683.webp\";s:5:\"width\";i:1024;s:6:\"height\";i:683;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:297020;}s:9:\"thumbnail\";a:5:{s:4:\"file\";s:31:\"field-notes-forest-150x150.webp\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:11472;}s:12:\"medium_large\";a:5:{s:4:\"file\";s:31:\"field-notes-forest-768x512.webp\";s:5:\"width\";i:768;s:6:\"height\";i:512;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:180620;}s:9:\"1536x1536\";a:5:{s:4:\"file\";s:33:\"field-notes-forest-1536x1024.webp\";s:5:\"width\";i:1536;s:6:\"height\";i:1024;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:556144;}}s:10:\"image_meta\";a:13:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}s:3:\"alt\";s:0:\"\";}}"
+    },
+    {
+      "meta_id": 11,
+      "post_id": 5,
+      "meta_key": "_wp_attachment_image_alt",
+      "meta_value": "A woodland path lit by the evening sun."
+    },
+    {
+      "meta_id": 12,
+      "post_id": 5,
+      "meta_key": "_field_notes_photo_source",
+      "meta_value": "https://wordpress.org/photos/photo/79635261b4/"
+    },
+    {
+      "meta_id": 13,
+      "post_id": 6,
+      "meta_key": "_wp_attached_file",
+      "meta_value": "2026/10/field-notes-coast.webp"
+    },
+    {
+      "meta_id": 14,
+      "post_id": 6,
+      "meta_key": "_wp_attachment_metadata",
+      "meta_value": "a:6:{s:5:\"width\";i:1920;s:6:\"height\";i:1280;s:4:\"file\";s:30:\"2026/10/field-notes-coast.webp\";s:8:\"filesize\";i:411492;s:5:\"sizes\";a:5:{s:6:\"medium\";a:5:{s:4:\"file\";s:30:\"field-notes-coast-300x200.webp\";s:5:\"width\";i:300;s:6:\"height\";i:200;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:18846;}s:5:\"large\";a:5:{s:4:\"file\";s:31:\"field-notes-coast-1024x683.webp\";s:5:\"width\";i:1024;s:6:\"height\";i:683;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:166268;}s:9:\"thumbnail\";a:5:{s:4:\"file\";s:30:\"field-notes-coast-150x150.webp\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:8310;}s:12:\"medium_large\";a:5:{s:4:\"file\";s:30:\"field-notes-coast-768x512.webp\";s:5:\"width\";i:768;s:6:\"height\";i:512;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:100724;}s:9:\"1536x1536\";a:5:{s:4:\"file\";s:32:\"field-notes-coast-1536x1024.webp\";s:5:\"width\";i:1536;s:6:\"height\";i:1024;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:300716;}}s:10:\"image_meta\";a:13:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}s:3:\"alt\";s:0:\"\";}}"
+    },
+    {
+      "meta_id": 16,
+      "post_id": 6,
+      "meta_key": "_wp_attachment_image_alt",
+      "meta_value": "Waves rolling onto the rocky coast of Koh Samet Island."
+    },
+    {
+      "meta_id": 17,
+      "post_id": 6,
+      "meta_key": "_field_notes_photo_source",
+      "meta_value": "https://wordpress.org/photos/photo/60162fd3c9/"
+    },
+    {
+      "meta_id": 18,
+      "post_id": 7,
+      "meta_key": "_wp_attached_file",
+      "meta_value": "2026/10/field-notes-meadow.webp"
+    },
+    {
+      "meta_id": 19,
+      "post_id": 7,
+      "meta_key": "_wp_attachment_metadata",
+      "meta_value": "a:6:{s:5:\"width\";i:1920;s:6:\"height\";i:1280;s:4:\"file\";s:31:\"2026/10/field-notes-meadow.webp\";s:8:\"filesize\";i:241482;s:5:\"sizes\";a:5:{s:6:\"medium\";a:5:{s:4:\"file\";s:31:\"field-notes-meadow-300x200.webp\";s:5:\"width\";i:300;s:6:\"height\";i:200;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:16010;}s:5:\"large\";a:5:{s:4:\"file\";s:32:\"field-notes-meadow-1024x683.webp\";s:5:\"width\";i:1024;s:6:\"height\";i:683;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:114482;}s:9:\"thumbnail\";a:5:{s:4:\"file\";s:31:\"field-notes-meadow-150x150.webp\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:6820;}s:12:\"medium_large\";a:5:{s:4:\"file\";s:31:\"field-notes-meadow-768x512.webp\";s:5:\"width\";i:768;s:6:\"height\";i:512;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:74472;}s:9:\"1536x1536\";a:5:{s:4:\"file\";s:33:\"field-notes-meadow-1536x1024.webp\";s:5:\"width\";i:1536;s:6:\"height\";i:1024;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:189788;}}s:10:\"image_meta\";a:13:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}s:3:\"alt\";s:0:\"\";}}"
+    },
+    {
+      "meta_id": 21,
+      "post_id": 7,
+      "meta_key": "_wp_attachment_image_alt",
+      "meta_value": "Wildflowers in a meadow beneath a warm evening sky."
+    },
+    {
+      "meta_id": 22,
+      "post_id": 7,
+      "meta_key": "_field_notes_photo_source",
+      "meta_value": "https://wordpress.org/photos/photo/726632647a/"
+    },
+    {
+      "meta_id": 23,
+      "post_id": 8,
+      "meta_key": "_wp_attached_file",
+      "meta_value": "2026/10/field-notes-mist.webp"
+    },
+    {
+      "meta_id": 24,
+      "post_id": 8,
+      "meta_key": "_wp_attachment_metadata",
+      "meta_value": "a:6:{s:5:\"width\";i:1281;s:6:\"height\";i:1920;s:4:\"file\";s:29:\"2026/10/field-notes-mist.webp\";s:8:\"filesize\";i:97374;s:5:\"sizes\";a:5:{s:6:\"medium\";a:5:{s:4:\"file\";s:29:\"field-notes-mist-200x300.webp\";s:5:\"width\";i:200;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:7386;}s:5:\"large\";a:5:{s:4:\"file\";s:30:\"field-notes-mist-683x1024.webp\";s:5:\"width\";i:683;s:6:\"height\";i:1024;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:45432;}s:9:\"thumbnail\";a:5:{s:4:\"file\";s:29:\"field-notes-mist-150x150.webp\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:3476;}s:12:\"medium_large\";a:5:{s:4:\"file\";s:30:\"field-notes-mist-768x1151.webp\";s:5:\"width\";i:768;s:6:\"height\";i:1151;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:51712;}s:9:\"1536x1536\";a:5:{s:4:\"file\";s:31:\"field-notes-mist-1025x1536.webp\";s:5:\"width\";i:1025;s:6:\"height\";i:1536;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:74620;}}s:10:\"image_meta\";a:13:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}s:3:\"alt\";s:0:\"\";}}"
+    },
+    {
+      "meta_id": 26,
+      "post_id": 8,
+      "meta_key": "_wp_attachment_image_alt",
+      "meta_value": "A walker looking along a foggy forest trail."
+    },
+    {
+      "meta_id": 27,
+      "post_id": 8,
+      "meta_key": "_field_notes_photo_source",
+      "meta_value": "https://wordpress.org/photos/photo/8416a9f5b3/"
+    },
+    {
+      "meta_id": 28,
+      "post_id": 9,
+      "meta_key": "_wp_attached_file",
+      "meta_value": "2026/10/field-notes-mountain.webp"
+    },
+    {
+      "meta_id": 29,
+      "post_id": 9,
+      "meta_key": "_wp_attachment_metadata",
+      "meta_value": "a:6:{s:5:\"width\";i:1920;s:6:\"height\";i:606;s:4:\"file\";s:33:\"2026/10/field-notes-mountain.webp\";s:8:\"filesize\";i:112800;s:5:\"sizes\";a:5:{s:6:\"medium\";a:5:{s:4:\"file\";s:32:\"field-notes-mountain-300x95.webp\";s:5:\"width\";i:300;s:6:\"height\";i:95;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:4930;}s:5:\"large\";a:5:{s:4:\"file\";s:34:\"field-notes-mountain-1024x323.webp\";s:5:\"width\";i:1024;s:6:\"height\";i:323;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:42270;}s:9:\"thumbnail\";a:5:{s:4:\"file\";s:33:\"field-notes-mountain-150x150.webp\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:2664;}s:12:\"medium_large\";a:5:{s:4:\"file\";s:33:\"field-notes-mountain-768x242.webp\";s:5:\"width\";i:768;s:6:\"height\";i:242;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:25708;}s:9:\"1536x1536\";a:5:{s:4:\"file\";s:34:\"field-notes-mountain-1536x485.webp\";s:5:\"width\";i:1536;s:6:\"height\";i:485;s:9:\"mime-type\";s:10:\"image/webp\";s:8:\"filesize\";i:78780;}}s:10:\"image_meta\";a:13:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}s:3:\"alt\";s:0:\"\";}}"
+    },
+    {
+      "meta_id": 31,
+      "post_id": 9,
+      "meta_key": "_wp_attachment_image_alt",
+      "meta_value": "A mountain landscape reflected in a quiet lake."
+    },
+    {
+      "meta_id": 32,
+      "post_id": 9,
+      "meta_key": "_field_notes_photo_source",
+      "meta_value": "https://wordpress.org/photos/photo/68464393ec/"
+    },
+    {
+      "meta_id": 35,
+      "post_id": 10,
+      "meta_key": "_thumbnail_id",
+      "meta_value": "4"
+    },
+    {
+      "meta_id": 38,
+      "post_id": 11,
+      "meta_key": "_thumbnail_id",
+      "meta_value": "5"
+    },
+    {
+      "meta_id": 41,
+      "post_id": 12,
+      "meta_key": "_thumbnail_id",
+      "meta_value": "6"
+    },
+    {
+      "meta_id": 44,
+      "post_id": 13,
+      "meta_key": "_thumbnail_id",
+      "meta_value": "8"
+    },
+    {
+      "meta_id": 47,
+      "post_id": 14,
+      "meta_key": "_thumbnail_id",
+      "meta_value": "7"
+    },
+    {
+      "meta_id": 50,
+      "post_id": 15,
+      "meta_key": "_thumbnail_id",
+      "meta_value": "9"
+    }
+  ],
+  "term_relationships": [
+    {
+      "object_id": 10,
+      "term_taxonomy_id": 2,
+      "term_order": 0
+    },
+    {
+      "object_id": 11,
+      "term_taxonomy_id": 2,
+      "term_order": 0
+    },
+    {
+      "object_id": 12,
+      "term_taxonomy_id": 2,
+      "term_order": 0
+    },
+    {
+      "object_id": 13,
+      "term_taxonomy_id": 3,
+      "term_order": 0
+    },
+    {
+      "object_id": 14,
+      "term_taxonomy_id": 3,
+      "term_order": 0
+    },
+    {
+      "object_id": 15,
+      "term_taxonomy_id": 3,
+      "term_order": 0
+    },
+    {
+      "object_id": 20,
+      "term_taxonomy_id": 4,
+      "term_order": 0
+    },
+    {
+      "object_id": 20,
+      "term_taxonomy_id": 5,
+      "term_order": 0
+    },
+    {
+      "object_id": 21,
+      "term_taxonomy_id": 4,
+      "term_order": 0
+    },
+    {
+      "object_id": 21,
+      "term_taxonomy_id": 6,
+      "term_order": 0
+    },
+    {
+      "object_id": 22,
+      "term_taxonomy_id": 4,
+      "term_order": 0
+    },
+    {
+      "object_id": 23,
+      "term_taxonomy_id": 4,
+      "term_order": 0
+    },
+    {
+      "object_id": 24,
+      "term_taxonomy_id": 4,
+      "term_order": 0
+    },
+    {
+      "object_id": 25,
+      "term_taxonomy_id": 4,
+      "term_order": 0
+    },
+    {
+      "object_id": 26,
+      "term_taxonomy_id": 4,
+      "term_order": 0
+    },
+    {
+      "object_id": 27,
+      "term_taxonomy_id": 4,
+      "term_order": 0
+    },
+    {
+      "object_id": 28,
+      "term_taxonomy_id": 4,
+      "term_order": 0
+    },
+    {
+      "object_id": 29,
+      "term_taxonomy_id": 4,
+      "term_order": 0
+    }
+  ],
+  "options": {
+    "blogname": "Reprint Field Notes",
+    "blogdescription": "A site worth copying.",
+    "default_category": "1",
+    "permalink_structure": "/%postname%/",
+    "show_on_front": "page",
+    "page_for_posts": "16",
+    "page_on_front": "19",
+    "theme_mods_twentytwentyfive": {
+      "custom_css_post_id": -1
+    }
+  }
+}
