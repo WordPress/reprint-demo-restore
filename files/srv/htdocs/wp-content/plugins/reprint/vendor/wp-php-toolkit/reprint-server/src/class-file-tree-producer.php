@@ -1,0 +1,759 @@
+<?php
+
+namespace WordPress\Reprint\Server;
+
+use InvalidArgumentException;
+
+/**
+ * Streams a provided list of filesystem paths in sorted order with
+ * cursor-based resumption. The caller must pass the same paths array
+ * on each request when resuming from a cursor. Callers are responsible
+ * for encoding cursors for transport (e.g. base64 for HTTP headers).
+ */
+class FileTreeProducer
+{
+    const DEFAULT_CHUNK_SIZE = 5 * 1024 * 1024;
+
+    const PHASE_STREAMING = "streaming";
+    const PHASE_FINISHED = "finished";
+
+    /** @var array */
+    private $directories;
+    /** @var int */
+    private $chunk_size;
+    /** @var bool */
+    private $index_only;
+    /** @var string|null */
+    private $filesystem_root;
+
+    /** @var string */
+    private $phase;
+    /** @var array|null */
+    private $current_chunk = null;
+
+    /** Explicit list of paths to stream, sorted on first use. */
+    /** @var array */
+    private $paths;
+    /** @var bool */
+    private $paths_sorted = false;
+    /** @var bool */
+    private $paths_positioned = false;
+    /**
+     * Restricts requested files to shared code and the selected site's uploads.
+     * Checked even when the client skips the index and supplies a path directly.
+     * Null leaves the ordinary single-site file rules in place.
+     *
+     * @var MultisiteFileSelection|null
+     */
+    private $multisite_selection;
+
+    /** Ephemeral index into $paths; NOT stored in cursor. */
+    /** @var int */
+    private $paths_position = 0;
+
+    /** State for the file currently being streamed in chunks. */
+    private $streaming_file_handle = null;
+
+    public function __destruct()
+    {
+        if ($this->streaming_file_handle !== null) {
+            fclose($this->streaming_file_handle);
+            $this->streaming_file_handle = null;
+        }
+    }
+    /** @var int */
+    private $streaming_file_offset = 0;
+    /** @var array|null */
+    private $current_file_meta = null;
+
+    /** Tracks the last emitted path for cursor generation. */
+    /** @var string|null */
+    private $last_emitted_path = null;
+    /** @var int|null */
+    private $last_emitted_ctime = null;
+
+    /**
+     * @param string|array $directories Root directories to scan.
+     * @param array $options {
+     *     @type int    $chunk_size Bytes per file chunk (default 5MB).
+     *     @type bool   $index_only Emit index entries instead of file contents.
+     *     @type string $cursor     JSON cursor string for resumption.
+     *     @type MultisiteFileSelection|null $multisite_selection Shared code and
+     *         selected uploads allowed by the source WordPress site. Default null.
+     *     @type array  $paths      Paths to stream (required).
+     * }
+     */
+    public function __construct($directories, array $options = [])
+    {
+        $this->multisite_selection = isset($options['multisite_selection']) ? $options['multisite_selection'] : null;
+        if ($this->multisite_selection !== null && !$this->multisite_selection instanceof MultisiteFileSelection) {
+            throw new InvalidArgumentException('multisite_selection must be a trusted MultisiteFileSelection object.');
+        }
+        $this->directories = $this->normalize_directories($directories);
+        $this->chunk_size = isset($options["chunk_size"]) ? $options["chunk_size"] : self::DEFAULT_CHUNK_SIZE;
+        $this->index_only = isset($options["index_only"]) ? $options["index_only"] : false;
+
+        if (!isset($options["paths"]) || !is_array($options["paths"])) {
+            throw new InvalidArgumentException(
+                "The 'paths' option is required and must be an array"
+            );
+        }
+        // Sort and resume using the same spelling that file chunks carry.
+        $this->paths = array_map(static function ($path) {
+            return Utils::normalize_path_separators($path, Utils::native_path_format());
+        }, $options["paths"]);
+
+        if (isset($options["cursor"])) {
+            $this->initialize_from_cursor($options["cursor"]);
+        } else {
+            $this->initialize_new();
+        }
+    }
+
+    /**
+     * Sets up a fresh traversal from the beginning.
+     */
+    private function initialize_new()
+    {
+        $this->phase = self::PHASE_STREAMING;
+        $dirs = $this->directories;
+        sort($dirs, SORT_STRING);
+        $this->filesystem_root = isset($dirs[0]) ? $dirs[0] : "/";
+
+        $this->current_chunk = null;
+        $this->streaming_file_handle = null;
+        $this->streaming_file_offset = 0;
+        $this->current_file_meta = null;
+        $this->last_emitted_path = null;
+        $this->last_emitted_ctime = null;
+        $this->paths_sorted = false;
+        $this->paths_positioned = false;
+        $this->paths_position = 0;
+    }
+
+    /**
+     * Restores producer state from a JSON cursor string.
+     *
+     * Cursor format is minimal: (path, ctime, byte_offset)
+     * - path: the file/dir/symlink we were processing or just finished
+     * - ctime: the ctime of the file when we started (for change detection)
+     * - bytes: byte offset within the file (0 if finished or non-file)
+     * Active file paths must be absolute filesystem names; byte offsets are non-negative integers.
+     *
+     * On resume, position within the paths array is determined by binary
+     * search based on the path. This ensures correctness even when the
+     * paths array changes between requests.
+     */
+    private function initialize_from_cursor($cursor_json)
+    {
+        $cursor = json_decode($cursor_json, true);
+        if ($cursor === null && json_last_error() !== JSON_ERROR_NONE) {
+            throw new InvalidArgumentException(
+                "Invalid cursor format: " . json_last_error_msg()
+            );
+        }
+
+        if (!is_array($cursor)) {
+            throw new InvalidArgumentException(
+                // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Protocol error, never HTML output.
+                'File cursor must be a JSON object or array; received ' . gettype($cursor) . '.'
+            );
+        }
+
+        // Check before the finished-phase return: a completed cursor has no
+        // file path left to check, but it must still belong to this selection.
+        $selection_identity = $this->multisite_selection === null ? null : $this->multisite_selection->get_identity();
+        if (( isset($cursor['multisite_selection']) ? $cursor['multisite_selection'] : null ) !== $selection_identity) {
+            throw new InvalidArgumentException('Cannot resume file fetch: multisite selection changed.');
+        }
+        $this->phase = isset($cursor["phase"]) ? $cursor["phase"] : self::PHASE_STREAMING;
+        $this->filesystem_root = isset($cursor["root"])
+            ? base64_decode($cursor["root"])
+            : (isset($this->directories[0]) ? $this->directories[0] : "/");
+        $this->current_chunk = null;
+        $this->streaming_file_handle = null;
+        $this->paths_sorted = false;
+        $this->paths_positioned = false;
+        $this->paths_position = 0;
+
+        if ($this->phase !== self::PHASE_STREAMING) {
+            $this->phase = self::PHASE_FINISHED;
+            return;
+        }
+
+        // Keep the producer's path spelling, including dot segments in absolute paths.
+        $path = null;
+        if (isset($cursor['path'])) {
+            $path = is_string($cursor['path']) ? base64_decode($cursor['path'], true) : false;
+            if ($path === false) {
+                throw new InvalidArgumentException(
+                    // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Protocol error, never HTML output.
+                    'File cursor path must be valid base64; received ' . json_encode($cursor['path']) . '.'
+                );
+            }
+        }
+        $byte_offset = array_key_exists('bytes', $cursor) ? $cursor['bytes'] : 0;
+        if (!is_int($byte_offset) || $byte_offset < 0) {
+            throw new InvalidArgumentException(
+                // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Protocol error, never HTML output.
+                'File cursor bytes must be a non-negative integer; received ' . json_encode($byte_offset) . '.'
+            );
+        }
+        // A zero position marks a completed entry, including a missing relative path.
+        if ($path !== null && $byte_offset > 0 && ( strpos($path, "\0") !== false || !Utils::is_absolute_path($path, Utils::native_path_format()) )) {
+            throw new InvalidArgumentException(
+                // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Protocol error, never HTML output.
+                'File cursor path must be an absolute filesystem path without NUL bytes when resuming file bytes; received ' . json_encode($path) . '.'
+            );
+        }
+        if ($path !== null && $this->multisite_selection !== null) {
+            $this->multisite_selection->assert_path_allowed($path);
+        }
+        $ctime = isset($cursor["ctime"]) ? $cursor["ctime"] : null;
+
+        $this->last_emitted_path = null;
+        $this->last_emitted_ctime = null;
+
+        if ($path !== null && $byte_offset > 0) {
+            // Resuming mid-file.
+            clearstatcache(true, $path);
+            $source_path = $this->pull_file_source_path($path);
+            $size = @filesize(Utils::source_io_path($source_path));
+            if ($size === false) {
+                // File disappeared; treat as completed.
+                $this->current_file_meta = null;
+                $this->streaming_file_offset = 0;
+                $this->last_emitted_path = $path;
+            } else {
+                $this->current_file_meta = [
+                    "path" => $path,
+                    "source_path" => $source_path,
+                    "ctime" => $ctime,
+                    "size" => $size,
+                ];
+                $this->streaming_file_offset = $byte_offset;
+                $this->last_emitted_path = $path;
+            }
+        } else {
+            $this->current_file_meta = null;
+            $this->streaming_file_offset = 0;
+            $this->last_emitted_path = $path;
+        }
+        // Position within paths array will be resolved by binary search
+        // when get_next_path_entry() is first called
+    }
+
+    /** @param string|array $directories */
+    private function normalize_directories($directories)
+    {
+        if (is_string($directories)) {
+            return [Utils::trim_right_slash($directories, Utils::native_path_format())];
+        }
+        return array_map(function ($d) {
+            return Utils::trim_right_slash($d, Utils::native_path_format());
+        }, $directories);
+    }
+
+    /**
+     * Advances to the next chunk. Returns false when finished.
+     */
+    public function next_chunk()
+    {
+        if ($this->phase === self::PHASE_FINISHED) {
+            return false;
+        }
+
+        $this->stream_step();
+        return $this->phase !== self::PHASE_FINISHED;
+    }
+
+    /**
+     * Produces the next chunk: file data, index entry, directory, or symlink.
+     */
+    private function stream_step()
+    {
+        if ($this->current_file_meta !== null) {
+            $this->stream_file_chunk($this->current_file_meta);
+            return;
+        }
+
+        while (true) {
+            // get_next_server_file() may set current_chunk directly for
+            // symlinks and directories, so clear it before each iteration.
+            $this->current_chunk = null;
+
+            $server_file = $this->get_next_server_file();
+
+            if ($this->current_chunk !== null) {
+                return;
+            }
+
+            if ($server_file === null) {
+                $this->phase = self::PHASE_FINISHED;
+                $this->current_chunk = null;
+                return;
+            }
+
+            if ($this->index_only) {
+                $this->emit_index_chunk($server_file);
+                return;
+            }
+
+            $this->stream_file_chunk($server_file);
+            return;
+        }
+    }
+
+    /**
+     * Emits an index entry chunk without streaming file contents.
+     */
+    private function emit_index_chunk(array $file)
+    {
+        $this->current_chunk = [
+            "type" => "index",
+            "path" => $file["path"],
+            "ctime" => $file["ctime"],
+            "size" => $file["size"],
+        ];
+        $this->last_emitted_path = $file["path"];
+        $this->last_emitted_ctime = $file["ctime"];
+        $this->current_file_meta = null;
+    }
+
+    /**
+     * Returns the next file entry, or sets current_chunk for non-file entries
+     * (symlinks, directories, missing paths) and returns null.
+     */
+    private function get_next_server_file()
+    {
+        return $this->get_next_path_entry();
+    }
+
+    /**
+     * Returns the next entry from the paths array.
+     *
+     * Paths are sorted on first access. Position is determined by binary
+     * search based on last_emitted_path, not by a stored index. This ensures
+     * correctness even when the paths array changes between requests.
+     */
+    private function get_next_path_entry()
+    {
+        if (!$this->paths_sorted) {
+            sort($this->paths, SORT_STRING);
+            $this->paths_sorted = true;
+        }
+
+        if (!$this->paths_positioned) {
+            if ($this->last_emitted_path !== null) {
+                $this->paths_position = $this->binary_search_next(
+                    $this->paths,
+                    $this->last_emitted_path
+                );
+            } else {
+                $this->paths_position = 0;
+            }
+            $this->paths_positioned = true;
+        }
+
+        while ($this->paths_position < count($this->paths)) {
+            $path = $this->paths[$this->paths_position];
+            $this->paths_position++;
+
+            if ($this->multisite_selection !== null) {
+                $this->multisite_selection->assert_path_allowed($path);
+            }
+            $resolved_path = $this->resolve_path($path);
+            if ($resolved_path === null) {
+                // Path doesn't exist or isn't accessible, emit as missing
+                $this->last_emitted_path = $path;
+                $this->last_emitted_ctime = null;
+                $this->current_chunk = [
+                    "type" => "missing",
+                    "path" => $path,
+                ];
+                return null;
+            }
+
+            $source_path = $this->pull_file_source_path($resolved_path);
+            $info = $this->lstat_path($source_path);
+            if ($info === null) {
+                continue;
+            }
+
+            if ($info["type"] === "link") {
+                $target = @Utils::source_readlink($resolved_path);
+                $this->last_emitted_path = $resolved_path;
+                $this->last_emitted_ctime = $info["ctime"];
+                $this->current_chunk = [
+                    "type" => "symlink",
+                    "path" => $resolved_path,
+                    "target" => $target !== false ? $target : "",
+                    "ctime" => isset($info["ctime"]) ? $info["ctime"] : 0,
+                ];
+                return null;
+            }
+
+            if ($info["type"] === "dir") {
+                $this->last_emitted_path = $resolved_path;
+                $this->last_emitted_ctime = isset($info["ctime"]) ? $info["ctime"] : null;
+                $this->current_chunk = [
+                    "type" => "directory",
+                    "path" => $resolved_path,
+                    "ctime" => isset($info["ctime"]) ? $info["ctime"] : 0,
+                ];
+                return null;
+            }
+
+            if ($info["type"] === "file") {
+                $ctime = $info["ctime"];
+                $size = $info["size"];
+                if ($ctime === null || $size === null) {
+                    continue;
+                }
+                $this->current_file_meta = [
+                    "path" => $resolved_path,
+                    "source_path" => $source_path,
+                    "ctime" => $ctime,
+                    "size" => $size,
+                ];
+                $this->streaming_file_offset = 0;
+                return $this->current_file_meta;
+            }
+        }
+
+        return null;
+    }
+
+    /**
+     * Resolves a path that might be relative to one of the root directories.
+     *
+     * Uses both file_exists() and is_link() because file_exists() follows
+     * symlinks and returns false for broken symlinks, but the symlink
+     * itself is still a valid filesystem entry we want to stream.
+     */
+    private function resolve_path($path)
+    {
+        if ($path === "") {
+            return null;
+        }
+
+        clearstatcache(true, $path);
+        if (Utils::is_absolute_path($path, Utils::native_path_format())) {
+            // A missing full path must not be retried beneath a source directory:
+            // that can return a different file after the requested one disappears.
+            return file_exists(Utils::source_io_path($path)) || Utils::source_is_link($path)
+                ? $path
+                : null;
+        }
+
+        foreach ($this->directories as $dir) {
+            $candidate = Utils::wp_join_unix_paths($dir, $path);
+            clearstatcache(true, $candidate);
+            if (file_exists(Utils::source_io_path($candidate)) || Utils::source_is_link($candidate)) {
+                return $candidate;
+            }
+        }
+
+        return null;
+    }
+
+    /**
+     * Reads the next chunk from the current file and performs post-read
+     * change detection via ctime comparison.
+     */
+    private function stream_file_chunk(array $file)
+    {
+        $source_path = $file["source_path"];
+        if ($this->streaming_file_handle === null) {
+            if ($this->multisite_selection !== null) {
+                $this->multisite_selection->assert_path_allowed($file["path"]);
+            }
+            clearstatcache(true, $source_path);
+            $pre_stat = @Utils::source_lstat($source_path);
+            if ($pre_stat === false || (($pre_stat["mode"] & 0170000) !== 0100000)) {
+                $this->streaming_file_handle = null;
+                $this->current_file_meta = null;
+                $this->current_chunk = [
+                    "type" => "error",
+                    "error_type" => $pre_stat === false ? "file_missing" : "file_changed",
+                    "path" => $file["path"],
+                    "message" => $pre_stat === false
+                        ? "File disappeared before read"
+                        : "Path is no longer a regular file",
+                ];
+                $this->last_emitted_path = $file["path"];
+                $this->last_emitted_ctime = $file["ctime"];
+                return;
+            }
+
+            $this->streaming_file_handle = @fopen(Utils::source_io_path($source_path), "r");
+            if (!$this->streaming_file_handle) {
+                $this->streaming_file_handle = null;
+                $this->current_file_meta = null;
+                $this->current_chunk = [
+                    "type" => "error",
+                    "error_type" => "file_open",
+                    "path" => $file["path"],
+                    "message" => "Failed to open file",
+                ];
+                $this->last_emitted_path = $file["path"];
+                $this->last_emitted_ctime = $file["ctime"];
+                return;
+            }
+            if ($this->streaming_file_offset > 0) {
+                $seek_result = fseek(
+                    $this->streaming_file_handle,
+                    $this->streaming_file_offset
+                );
+                if ($seek_result === -1) {
+                    fclose($this->streaming_file_handle);
+                    $this->streaming_file_handle = null;
+                    $this->current_file_meta = null;
+                    $this->current_chunk = [
+                        "type" => "error",
+                        "error_type" => "file_seek",
+                        "path" => $file["path"],
+                        "message" => "Failed to seek to offset {$this->streaming_file_offset}",
+                    ];
+                    $this->last_emitted_path = $file["path"];
+                    $this->last_emitted_ctime = $file["ctime"];
+                    $this->streaming_file_offset = 0;
+                    return;
+                }
+            }
+        }
+
+        $data = fread($this->streaming_file_handle, $this->chunk_size);
+        if (false === $data || ("" === $data && $file["size"] !== 0)) {
+            fclose($this->streaming_file_handle);
+            $this->streaming_file_handle = null;
+            $this->streaming_file_offset = 0;
+            $this->last_emitted_path = $file["path"];
+            $this->last_emitted_ctime = $file["ctime"];
+            $this->current_file_meta = null;
+            $this->current_chunk = [
+                "type" => "error",
+                "error_type" => "file_read",
+                "path" => $file["path"],
+                "message" => "Failed to read file",
+            ];
+            return;
+        }
+
+        $offset = $this->streaming_file_offset;
+        $this->streaming_file_offset += strlen($data);
+
+        $is_first = $offset === 0;
+        $is_last = feof($this->streaming_file_handle);
+
+        $changed = false;
+        $change_ctime = null;
+        $change_size = null;
+        $error_type = "file_changed";
+
+        // Detect whether the file changed while we were reading it.
+        clearstatcache(true, $source_path);
+        $stat = @stat(Utils::source_io_path($source_path));
+        if ($stat === false) {
+            $changed = true;
+            $error_type = "file_missing";
+        } else {
+            // feof() can stay false until another read, even after an exact
+            // final chunk. Use the fresh size instead of emitting an empty-read
+            // error on the next step. This also works for native Windows streams.
+            $is_last = $is_last || $stat["size"] === $this->streaming_file_offset;
+            $now_ctime = $stat["ctime"];
+            if ($now_ctime !== $file["ctime"]) {
+                $changed = true;
+                $change_ctime = $now_ctime;
+            }
+        }
+
+        if ($changed) {
+            fclose($this->streaming_file_handle);
+            $this->streaming_file_handle = null;
+            $this->streaming_file_offset = 0;
+            $this->last_emitted_path = $file["path"];
+            $this->last_emitted_ctime = $file["ctime"];
+            $this->current_file_meta = null;
+            $this->current_chunk = [
+                "type" => "error",
+                "error_type" => $error_type,
+                "path" => $file["path"],
+                "message" =>
+                    $error_type === "file_missing"
+                        ? "File disappeared during stream"
+                        : "File changed during stream",
+                "expected_ctime" => $file["ctime"],
+                "actual_ctime" => $change_ctime,
+            ];
+            return;
+        }
+
+        $this->current_chunk = [
+            "type" => "file",
+            "path" => $file["path"],
+            "data" => $data,
+            "size" => $file["size"],
+            "ctime" => $file["ctime"],
+            "offset" => $offset,
+            "is_first_chunk" => $is_first,
+            "is_last_chunk" => $is_last,
+            "file_changed" => $changed,
+            "change_ctime" => $change_ctime,
+            "change_size" => $change_size,
+        ];
+
+        if ($is_last) {
+            fclose($this->streaming_file_handle);
+            $this->streaming_file_handle = null;
+            $this->streaming_file_offset = 0;
+            $this->last_emitted_path = $file["path"];
+            $this->last_emitted_ctime = $file["ctime"];
+            $this->current_file_meta = null;
+        }
+    }
+
+    private function pull_file_source_path($path)
+    {
+        $source_path = Utils::pull_file_source_path($path);
+        if ($source_path === null) {
+            // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Protocol error, not HTML.
+            throw new InvalidArgumentException('Source file is excluded from pull: ' . $path);
+        }
+        return $source_path;
+    }
+
+    /**
+     * Returns the chunk produced by the last call to next_chunk().
+     */
+    public function get_current_chunk()
+    {
+        return $this->current_chunk;
+    }
+
+    /**
+     * Serializes state into a JSON cursor string.
+     *
+     * Cursor format is minimal: (path, ctime, byte_offset)
+     * - path: last emitted path, or current file being streamed
+     * - ctime: ctime of file when we started reading (for change detection)
+     * - bytes: byte offset within the current file (0 if not mid-file)
+     *
+     * No traversal stack or list indices are stored. On resume, position is
+     * determined by binary search based on the path. This ensures correctness
+     * even when the filesystem changes between requests.
+     */
+    public function get_reentrancy_cursor()
+    {
+        if ($this->phase === self::PHASE_FINISHED) {
+            return json_encode([
+                "phase" => self::PHASE_FINISHED,
+                "multisite_selection" => $this->multisite_selection === null ? null : $this->multisite_selection->get_identity(),
+                "root" => base64_encode($this->filesystem_root),
+            ]);
+        }
+
+        $cursor = [
+            "phase" => $this->phase,
+            "root" => base64_encode($this->filesystem_root),
+        ];
+
+        if ($this->multisite_selection !== null) {
+            $cursor['multisite_selection'] = $this->multisite_selection->get_identity();
+        }
+        if ($this->current_file_meta !== null) {
+            $cursor["path"] = base64_encode($this->current_file_meta["path"]);
+            $cursor["ctime"] = $this->current_file_meta["ctime"];
+            $cursor["bytes"] = $this->streaming_file_offset;
+        } else if ($this->last_emitted_path !== null) {
+            $cursor["path"] = base64_encode($this->last_emitted_path);
+            $cursor["ctime"] = $this->last_emitted_ctime;
+            $cursor["bytes"] = 0;
+        }
+        return json_encode($cursor);
+    }
+
+    /**
+     * Returns progress metadata for logging and UI updates.
+     */
+    public function get_progress()
+    {
+        $progress = [
+            "phase" => $this->phase,
+        ];
+
+        if ($this->phase === self::PHASE_STREAMING) {
+            if ($this->last_emitted_path !== null) {
+                $progress["last_path"] = base64_encode($this->last_emitted_path);
+            }
+            if ($this->current_file_meta) {
+                $file = $this->current_file_meta;
+                $progress["current_file"] = [
+                    "path" => base64_encode($file["path"]),
+                    "size" => $file["size"],
+                    "bytes_read" => $this->streaming_file_offset,
+                ];
+            }
+        }
+
+        return $progress;
+    }
+
+    /**
+     * Returns the filesystem root path.
+     */
+    public function get_filesystem_root()
+    {
+        return $this->filesystem_root;
+    }
+
+    /**
+     * Returns the index of the first entry strictly greater than $last
+     * in a sorted array, using binary search.
+     */
+    private function binary_search_next(array $entries, $last)
+    {
+        $low = 0;
+        $high = count($entries);
+        while ($low < $high) {
+            $mid = Utils::integer_divide($low + $high, 2);
+            if (strcmp($entries[$mid], $last) <= 0) {
+                $low = $mid + 1;
+            } else {
+                $high = $mid;
+            }
+        }
+        return $low;
+    }
+
+    /**
+     * Classifies a path as file, dir, link, or other via a single lstat() call.
+     *
+     * @return array|null {type: 'file'|'dir'|'link'|'other', ctime: ?int, size: ?int}
+     */
+    private function lstat_path($path)
+    {
+        clearstatcache(true, $path);
+        $stat = @Utils::source_lstat($path);
+        if ($stat === false) {
+            return null;
+        }
+
+        $mode = $stat["mode"] & 0170000;
+        $type = "other";
+        if ($mode === 0120000) {
+            $type = "link";
+        } elseif ($mode === 0040000) {
+            $type = "dir";
+        } elseif ($mode === 0100000) {
+            $type = "file";
+        }
+
+        return [
+            "type" => $type,
+            "ctime" => isset($stat["ctime"]) ? (int) $stat["ctime"] : null,
+            "size" => isset($stat["size"]) ? (int) $stat["size"] : null,
+        ];
+    }
+}

@@ -1,60 +1,42 @@
 # Restore the Reprint Field Notes demo
 
-Use this kit to rebuild [reprint-demo.wordpress.net](https://reprint-demo.wordpress.net/) if its WordPress site is lost or damaged. It contains the published pages, six stories, block templates, navigation, styles, and photos from November 4, 2026. It does not contain WordPress accounts, a production database dump, or hosting credentials. You can restore the site content even when the live demo is offline.
+This is a Reprint snapshot of [reprint-demo.wordpress.net](https://reprint-demo.wordpress.net/), taken on November 4, 2026. It uses Reprint's normal layout: `files/` contains the pulled site files, and `state/` contains the SQL dump and the metadata Reprint needs to restore it. No custom importer is needed.
 
-If the hosting team has a known-good backup, use its normal restore process first. Use this kit when you need to rebuild the site content on a fresh WordPress install.
+This public snapshot contains the published site, including its styles, navigation, and photos. It omits revisions, live account credentials, the hosted `wp-config.php`, and the demo's private deployment settings. The `wp-config.php` under `files/` is a local stub. Keep production backups separate.
 
-## 1. Prepare a staging site
+## Restore and check a local copy
 
-Ask the hosting team for a fresh, non-public, single-site WordPress staging install and SSH or WP-CLI access. Leave the live site in place. This kit was tested with WordPress 7.1.4 and Twenty Twenty-Five 1.5. Use a supported WordPress version and install [Twenty Twenty-Five](https://wordpress.org/themes/twentytwentyfive/) if it is missing.
-
-Clone this repo somewhere **outside** the staging web root. From the staging WordPress directory, set `kit` to that clone and check the target:
-
-```sh
-kit=/path/to/reprint-demo-restore
-test -f "$kit/site.json"
-wp option get home
-wp eval 'echo wp_get_environment_type(), PHP_EOL;'
-```
-
-Continue only if the URL is your staging site and the environment is `staging` (or `local` for a rehearsal). If the host manages the environment setting, ask the hosting team to set it. Do not change the live site's setting to run the importer.
-
-## 2. Restore the content
-
-Run these commands from the staging WordPress directory. `wp site empty` deletes posts, comments, terms, and links from its target. Confirm the prompt only on the **new staging install**, where there is no content to keep. The maintainer login you created when setting up WordPress stays in place.
-
-```sh
-wp theme activate twentytwentyfive
-wp site empty
-```
-
-After both commands succeed, import the site:
+You need PHP CLI with SQLite and GD. Run this from the repository root on macOS or Linux. The commands use a scratch directory so the checked-in snapshot stays unchanged. They download the client from WordPress.org but do not connect to the live demo.
 
 ```sh
 (
   set -eu
-  author_id=$(wp user create field-notes field-notes@example.invalid \
-    --role=author --display_name='Field Notes' --porcelain)
-  wp eval-file "$kit/restore.php" "$author_id"
+  work=$(mktemp -d)
+  cp -R files state "$work/"
+  cd "$work"
 
-  uploads=$(wp eval 'echo wp_get_upload_dir()["basedir"];')
-  test -n "$uploads"
-  mkdir -p "$uploads"
-  cp -R "$kit/uploads/." "$uploads/"
-  wp rewrite flush
+  curl -fL https://plugins.svn.wordpress.org/reprint/downloads/0.11.6/reprint.phar -o reprint.phar
+  source_url=https://reprint-demo.wordpress.net
+  php reprint.phar db-apply "$source_url" --state-dir=./state --fs-root=./files \
+    --target-engine=sqlite --new-site-url=http://localhost:8881
+  php reprint.phar apply-runtime "$source_url" --state-dir=./state --fs-root=./files \
+    --runtime=php-builtin --output-dir=./runtime --port=8881
+  bash runtime/start.sh
 )
 ```
 
-The separate author account supplies the “Field Notes” byline; use your own maintainer account to sign in. The importer keeps the original post IDs so blocks still find the right menus and photos. It refuses a nonempty site or the live demo URL. If the import fails partway through, start again on a fresh staging install.
+Open <http://localhost:8881/>. Check the homepage, Journal, About, a story, and a photo. Navigation should stay on the local copy. The download command should point to WordPress.org. Press Ctrl+C to stop the server. If port 8881 is busy, use another port in both commands.
 
-## 3. Verify and switch over
+## Recover the hosted demo
 
-- Open the staging homepage, Journal, About, and one story. Check that navigation stays on staging and the photos load. The homepage download command should point to `plugins.svn.wordpress.org`.
-- Keep a rollback copy of the current live site. Have the hosting team move the demo domain to the verified install, or promote staging using the host's normal process. Do not overwrite the host's WordPress configuration. If any content links still point to staging, ask the hosting team to run a WordPress-aware URL replacement for that staging URL. Check the pages again at the live address.
-- Restore the **Reprint copy endpoint** separately with the maintainers who have access to its approved host configuration. This kit restores the website content; it does not enable anonymous downloads. Do not enable a public exporter on an ordinary WordPress install. Before reopening the demo, verify that its export includes only public sample data and rejects uploads. Then run the homepage's copy command in a new directory and open the resulting local copy.
+1. **Check for a host backup first.** If the hosting team has a known-good backup, use its normal restore process. Otherwise, use this snapshot to rebuild on a fresh, non-public staging site. Leave the current live site and its database in place for rollback.
+2. **Restore into a fresh staging database.** Give the hosting maintainer this snapshot. The dump uses the `wp_` table prefix and came from MariaDB. Apply it with Reprint's `db-apply` using `--target-engine=mysql`, the staging database connection options, and `--new-site-url` set to the staging URL. The dump replaces WordPress tables and does not carry over a working administrator login. Never apply it to a database you need to keep. Have the host point staging WordPress at the restored database and provision a new maintainer account there.
+3. **Restore the media and theme.** Copy the contents of `files/srv/htdocs/wp-content/uploads/` into the staging uploads directory and use the Twenty Twenty-Five theme. Keep the host's WordPress core and configuration. Do not copy the snapshot's local `wp-config.php` onto the host.
+4. **Verify before switching the domain.** Check the staging site as above. Ask the hosting team to promote it and make sure the site's URLs use the live domain. Recheck the pages and photos at the live address.
+5. **Restore the Reprint copy endpoint separately.** Ask the hosting maintainers for the approved demo export setup. Don't enable anonymous downloads on an ordinary WordPress install. Verify that the demo export includes only public sample data and rejects uploads. Then run the homepage copy command in a fresh directory and open the resulting local copy.
 
-If you refresh this kit, include only reviewed public content and media. Restore into fresh staging and repeat these checks before publishing an update. Keep production backups and host settings out of this repo.
+When updating this repo, review the files and SQL before publishing and repeat the local restore. Do not commit raw pulls, credentials, runtime logs, or generated databases.
 
 ## Photo credits
 
-The photos come from the [WordPress Photo Directory](https://wordpress.org/photos/) under [CC0](https://creativecommons.org/publicdomain/zero/1.0/). The restored About page credits each photographer and links to the original photo.
+The photos come from the [WordPress Photo Directory](https://wordpress.org/photos/) under [CC0](https://creativecommons.org/publicdomain/zero/1.0/). The About page credits each photographer.

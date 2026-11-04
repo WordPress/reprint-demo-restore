@@ -1,0 +1,43 @@
+{
+    "packages": [
+        {
+            "name": "wp-php-toolkit/reprint-server",
+            "version": "dev-main",
+            "version_normalized": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "../packages/reprint-server",
+                "reference": "dcb35e0d1c3378228d6722650c37dda7cd0599e7"
+            },
+            "require": {
+                "php": ">=5.6.20"
+            },
+            "replace": {
+                "wp-php-toolkit/reprint-exporter": "self.version"
+            },
+            "suggest": {
+                "ext-openssl": "Needed to verify public-key signatures; hosts without it accept HMAC connection tokens only.",
+                "ext-pdo": "Needed for the SQLite export path; recommended for MySQL exports (the wpdb fallback handles MySQL when absent).",
+                "ext-pdo_mysql": "Recommended for MySQL exports; falls back to wpdb when absent."
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Streaming export engine used by the Reprint Server WordPress plugin",
+            "transport-options": {
+                "symlink": false,
+                "relative": true
+            },
+            "install-path": "../wp-php-toolkit/reprint-server"
+        }
+    ],
+    "dev": false,
+    "dev-package-names": []
+}
